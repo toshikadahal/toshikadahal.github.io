@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="fluid-canvas" aria-hidden="true"></canvas>
   <div class="page-bg"></div>
 
   <header class="site-header">
@@ -31,6 +32,7 @@
       <a href="#clinical">Clinical</a>
       <a href="#education">Education</a>
       <a href="#research">Research</a>
+      <a href="#schedule">Schedule</a>
       <a href="#resources">Resources</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -45,10 +47,11 @@
           I am Dr. Anuj Devkota, an ENT and Head & Neck Surgery specialist based in Kathmandu, Nepal.
           My work combines clinical ENT care, surgical anatomy, research, teaching, and digital patient education.
         </p>
+        <p class="hero-note">Animated antigravity fluid background with floating ENT themed elements including ear care, sinus care, mastoid anatomy, airway, rhinology and otology.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#education">Explore ENT topics</a>
           <a class="btn btn-soft" href="#research">View research</a>
-          <a class="btn btn-outline" href="#contact">Contact</a>
+          <a class="btn btn-outline" href="#schedule">Consultation schedule</a>
         </div>
       </div>
 
@@ -220,6 +223,45 @@
       </div>
     </section>
 
+
+    <section id="schedule" class="section schedule-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Consultation schedule</p>
+        <h2>Where to consult</h2>
+        <p>
+          Please confirm the appointment time with the hospital or clinic before visiting, especially during holidays, academic duties, workshops, or emergency schedule changes.
+        </p>
+      </div>
+
+      <div class="schedule-grid">
+        <article class="schedule-card reveal primary-clinic">
+          <span class="schedule-label">Kalanki Polyclinic</span>
+          <h3>Kalanki Polyclinic</h3>
+          <p class="schedule-location">Kalanki, Kathmandu</p>
+          <div class="schedule-time">
+            <strong>Sunday, Tuesday and Thursday</strong>
+            <span>5:30 PM to 6:30 PM</span>
+          </div>
+          <p class="schedule-note">
+            ENT consultation for ear, nose, throat, head and neck concerns.
+          </p>
+        </article>
+
+        <article class="schedule-card reveal">
+          <span class="schedule-label">Nepal National Hospital</span>
+          <h3>Nepal National Hospital</h3>
+          <p class="schedule-location">Kalanki, Kathmandu</p>
+          <div class="schedule-time">
+            <strong>Monday, Wednesday and Friday</strong>
+            <span>5:30 PM to 6:30 PM</span>
+          </div>
+          <p class="schedule-note">
+            Please contact the hospital before visiting to confirm availability and appointment timing.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section id="resources" class="section">
       <div class="section-heading reveal">
         <p class="section-kicker">Featured resources</p>
@@ -278,7 +320,7 @@
           <p class="section-kicker">Contact</p>
           <h2>Professional contact and collaboration</h2>
           <p>
-            For academic communication, collaboration, patient education projects or professional enquiries, please use the links below.
+            For academic communication, collaboration, patient education projects, professional enquiries or consultation schedule confirmation, please use the links below.
           </p>
         </div>
 
@@ -302,6 +344,7 @@
     <span>ENT Doctor × Patient Education × Research × Digital Health</span>
   </footer>
 
+  <script src="fluid.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

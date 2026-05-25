@@ -35,15 +35,79 @@ a {
   text-decoration: none;
 }
 
+
+#fluid-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -4;
+  pointer-events: none;
+  opacity: 0.96;
+}
+
 .page-bg {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -3;
   background:
-    radial-gradient(circle at 5% 10%, rgba(20, 184, 166, 0.12), transparent 28%),
-    radial-gradient(circle at 90% 18%, rgba(200, 162, 74, 0.12), transparent 25%),
+    radial-gradient(circle at 8% 12%, rgba(20, 184, 166, 0.10), transparent 24%),
+    radial-gradient(circle at 90% 18%, rgba(200, 162, 74, 0.10), transparent 20%),
     linear-gradient(180deg, #f8fafc 0%, #eef7f6 100%);
 }
+
+.site-header {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+}
+
+.hero-note {
+  margin: 16px 0 0;
+  display: inline-flex;
+  max-width: 760px;
+  color: #0f766e;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+}
+
+.hero-panel,
+.timeline article,
+.publication-stack article,
+.focus-card,
+.resource-card,
+.audience,
+.schedule-card,
+.education-card {
+  backdrop-filter: blur(16px);
+}
+
+.hero-panel {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,255,255,0.62)),
+    radial-gradient(circle at top right, rgba(20,184,166,0.28), transparent 45%);
+}
+
+.focus-card,
+.resource-card,
+.audience,
+.timeline article,
+.publication-stack article,
+.schedule-card {
+  background: rgba(255,255,255,0.80);
+}
+
+@media (max-width: 760px) {
+  .hero-note {
+    border-radius: 22px;
+    display: block;
+    font-size: 0.88rem;
+  }
+}
+
 
 .site-header {
   width: min(1180px, calc(100% - 32px));
@@ -348,7 +412,7 @@ a {
 .focus-card,
 .resource-card,
 .audience {
-  background: rgba(255,255,255,0.86);
+  background: rgba(255,255,255,0.80);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
@@ -507,6 +571,97 @@ a {
   color: #475569;
 }
 
+
+.schedule-section {
+  padding-top: 48px;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.schedule-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.schedule-card::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: -70px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: rgba(15, 118, 110, 0.08);
+}
+
+.schedule-card.primary-clinic {
+  background:
+    radial-gradient(circle at top right, rgba(20, 184, 166, 0.16), transparent 36%),
+    rgba(255,255,255,0.96);
+  border-color: rgba(15, 118, 110, 0.22);
+}
+
+.schedule-label {
+  display: inline-flex;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border: 1px solid #b7efe6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.schedule-card h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+}
+
+.schedule-location {
+  color: var(--gray);
+  margin: 6px 0 22px;
+}
+
+.schedule-time {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.schedule-time strong,
+.schedule-time span {
+  display: block;
+}
+
+.schedule-time strong {
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.schedule-time span {
+  color: var(--teal);
+  font-weight: 900;
+  margin-top: 6px;
+}
+
+.schedule-note {
+  color: #475569;
+  margin: 0;
+}
+
 .contact-section {
   padding-top: 40px;
 }
@@ -635,7 +790,8 @@ a {
   .resource-grid,
   .audience-grid,
   .contact-links,
-  .mini-grid {
+  .mini-grid,
+  .schedule-grid {
     grid-template-columns: 1fr;
   }
 

@@ -19,3 +19,16 @@ Files
 How to publish
 
 Upload all three files to the root of the `anujdevkota.github.io` repository, then enable GitHub Pages from repository Settings.
+
+
+Updated consultation schedule
+
+- Kalanki Polyclinic, Kalanki: Sunday, Tuesday and Thursday, 5:30 PM to 6:30 PM
+- Nepal National Hospital, Kalanki: Monday, Wednesday and Friday, 5:30 PM to 6:30 PM
+
+
+Visual update
+
+- Antigravity fluid background with floating ENT themed elements
+- Glassmorphism cards and hero panels
+- Animated ENT labels such as Ear Care, Sinus, Otology, Rhinology, Mastoid and Temporal Bone
