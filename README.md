@@ -1,34 +1,36 @@
-# Dr. Anuj Devkota personal website
+# Dr. Anuj Devkota liquid glass website
 
-Modern GitHub Pages website for Dr. Anuj Devkota.
+Professional ENT portfolio website for GitHub Pages.
 
 Theme
 
 ENT Doctor × Patient Education × Research × Digital Health
 
+Design direction
+
+Liquid glass portfolio style with dark medical background, frosted panels, animated ENT themed fluid elements and responsive layout.
+
 Live website
 
 https://anujdevkota.github.io
 
+Consultation schedule
+
+Kalanki Polyclinic  
+Sunday, Tuesday and Thursday  
+5:30 PM to 6:30 PM
+
+Nepal National Hospital, Kalanki  
+Monday, Wednesday and Friday  
+5:30 PM to 6:30 PM
+
 Files
 
-- `index.html`
-- `style.css`
-- `script.js`
+- index.html
+- style.css
+- script.js
+- README.md
 
-How to publish
+Publish
 
-Upload all three files to the root of the `anujdevkota.github.io` repository, then enable GitHub Pages from repository Settings.
-
-
-Updated consultation schedule
-
-- Kalanki Polyclinic, Kalanki: Sunday, Tuesday and Thursday, 5:30 PM to 6:30 PM
-- Nepal National Hospital, Kalanki: Monday, Wednesday and Friday, 5:30 PM to 6:30 PM
-
-
-Visual update
-
-- Antigravity fluid background with floating ENT themed elements
-- Glassmorphism cards and hero panels
-- Animated ENT labels such as Ear Care, Sinus, Otology, Rhinology, Mastoid and Temporal Bone
+Upload these files to the root of the anujdevkota.github.io repository and enable GitHub Pages.
