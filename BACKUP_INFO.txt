@@ -1,5 +1,5 @@
-Backup branch created before final push:
-backup-before-final-image-sequence-20260526-215851
+Backup branch created before final website push:
+backup-before-final-push-20260526-221823
 
 Published from:
 C:\Users\nazar\Desktop\ent-scrolly-trial
@@ -16,5 +16,5 @@ git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-si
 cd reset-anuj-site
 git fetch origin
 git checkout main
-git reset --hard origin/backup-before-final-image-sequence-20260526-215851
+git reset --hard origin/backup-before-final-push-20260526-221823
 git push --force-with-lease origin main
