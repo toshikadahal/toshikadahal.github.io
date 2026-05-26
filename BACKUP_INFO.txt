@@ -1,10 +1,14 @@
-Backup branch created before final scrollytelling push:
-backup-before-final-scrolly-20260526-211945
+Backup branch created before final website push:
+backup-before-final-push-20260526-214246
 
-This published site uses direct WebP images from:
+Published from:
+C:\Users\nazar\Desktop\ent-scrolly-trial
+
+Image sequence used:
 C:\Users\nazar\Desktop\ent-scrolly-trial\public\sequence
 
-No zip file is used by the live website.
+Frames used:
+75
 
 To reset:
 
@@ -12,5 +16,5 @@ git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-si
 cd reset-anuj-site
 git fetch origin
 git checkout main
-git reset --hard origin/backup-before-final-scrolly-20260526-211945
+git reset --hard origin/backup-before-final-push-20260526-214246
 git push --force-with-lease origin main
