@@ -1,0 +1,11 @@
+Backup branch created before final scrollytelling push:
+backup-before-final-scrolly-20260526-161237
+
+To reset the website to backup:
+
+git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-site
+cd reset-anuj-site
+git fetch origin
+git checkout main
+git reset --hard origin/backup-before-final-scrolly-20260526-161237
+git push --force-with-lease origin main
