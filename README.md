@@ -1,6 +1,6 @@
-# Dr. Anuj Devkota | ENT Head and Neck Surgeon | Asst. Professor | Nepal
+# Dr. Anuj Devkota, ENT Head and Neck Surgeon | Asst. Professor | Teaching Hospital | Maharajgunj
 
-Official website of **Dr. Anuj Devkota**, ENT Head and Neck Surgeon and Assistant Professor in Nepal.
+Official website of **Dr. Anuj Devkota**, ENT Head and Neck Surgeon and Assistant Professor at Teaching Hospital, Maharajgunj, Nepal.
 
 Live website:
 
@@ -12,7 +12,7 @@ This website presents professional information, consultation details, ENT patien
 
 ## Main search title
 
-Dr. Anuj Devkota | ENT Head and Neck Surgeon | Asst. Professor | Nepal
+Dr. Anuj Devkota, ENT Head and Neck Surgeon | Asst. Professor | Teaching Hospital | Maharajgunj
 
 ## Medical disclaimer
 
