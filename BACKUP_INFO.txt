@@ -1,5 +1,5 @@
 Backup branch created before final website push:
-backup-before-loader-final-20260527-124607
+backup-before-loader-bottom-20260527-125319
 
 Published from:
 C:\Users\nazar\Desktop\ent-scrolly-trial
@@ -16,5 +16,5 @@ git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-si
 cd reset-anuj-site
 git fetch origin
 git checkout main
-git reset --hard origin/backup-before-loader-final-20260527-124607
+git reset --hard origin/backup-before-loader-bottom-20260527-125319
 git push --force-with-lease origin main
