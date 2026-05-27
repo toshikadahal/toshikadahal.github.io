@@ -1,5 +1,5 @@
 Backup branch created before final website push:
-backup-before-loader-bottom-20260527-125319
+backup-before-final-readme-push-20260527-125735
 
 Published from:
 C:\Users\nazar\Desktop\ent-scrolly-trial
@@ -10,11 +10,13 @@ C:\Users\nazar\Desktop\ent-scrolly-trial\public\sequence
 Frames used:
 40
 
+README.md and LICENSE were kept in this GitHub push.
+
 To reset:
 
 git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-site
 cd reset-anuj-site
 git fetch origin
 git checkout main
-git reset --hard origin/backup-before-loader-bottom-20260527-125319
+git reset --hard origin/backup-before-final-readme-push-20260527-125735
 git push --force-with-lease origin main
