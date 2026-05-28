@@ -1,10 +1,6 @@
-Backup branch created before final website push:
+Backup branch created before this push:
 
-backup-before-final-push-20260528-120103
-
-Published from:
-
-C:\Users\nazar\Desktop\ent-scrolly-trial
+backup-before-push-20260528-122610
 
 To reset:
 
@@ -12,5 +8,5 @@ git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-si
 cd reset-anuj-site
 git fetch origin
 git checkout main
-git reset --hard origin/backup-before-final-push-20260528-120103
+git reset --hard origin/backup-before-push-20260528-122610
 git push --force-with-lease origin main
