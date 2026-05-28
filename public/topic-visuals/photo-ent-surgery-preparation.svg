@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#18181b"/>
+      <stop offset=".55" stop-color="#3f3f46"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#a1a1aa" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#a1a1aa" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(560 90)">
+  <path d="M90 280 315 55" stroke="#fafafa" stroke-width="30" stroke-linecap="round"/>
+  <path d="M290 32l74-74 78 78-74 74z" transform="translate(0 74)" fill="#a1a1aa" opacity=".9"/>
+  <path d="M60 310l54-54 55 55-54 54z" fill="#e4e4e7" opacity=".92"/>
+  <path d="M160 210l56 56" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".76"/>
+  <path d="M210 160l56 56" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".76"/>
+  <circle cx="342" cy="66" r="42" fill="#fff" opacity=".14"/>
+  <path d="M326 66h33" stroke="#020617" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">SURGERY</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Preparing for ENT surgery</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Surgery patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

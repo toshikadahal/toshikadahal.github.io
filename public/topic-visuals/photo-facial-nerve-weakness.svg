@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#17113a"/>
+      <stop offset=".55" stop-color="#4c1d95"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#c4b5fd" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#c4b5fd" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(550 60)">
+  <circle cx="220" cy="155" r="120" fill="#ddd6fe" opacity=".92"/>
+  <path d="M151 141c27-13 55-13 82 0" fill="none" stroke="#32130d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M264 139c25 4 44 18 57 42" fill="none" stroke="#32130d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M150 211c55 45 107 35 156-18" fill="none" stroke="#7f1d1d" stroke-width="12" stroke-linecap="round"/>
+  <path d="M252 50c43 68 45 151 7 247" fill="none" stroke="#c4b5fd" stroke-width="9" stroke-linecap="round" stroke-dasharray="12 16"/>
+  <path d="M95 351c38-59 78-77 124-77s86 18 124 77" fill="#ddd6fe" opacity=".75"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">ADVANCED</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Facial nerve weakness</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Advanced ENT patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

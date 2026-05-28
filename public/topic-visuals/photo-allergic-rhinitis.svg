@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#24113d"/>
+      <stop offset=".55" stop-color="#7c2d6d"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#d8b4fe" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#d8b4fe" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(575 66)">
+  <path d="M212 28c45 93 82 158 118 231 20 43-7 84-59 93-65 10-133-19-171-65" fill="#f0b9a4" opacity=".94"/>
+  <path d="M124 128c54-38 103-41 151-9" fill="none" stroke="#f0f9ff" stroke-width="12" stroke-linecap="round" opacity=".82"/>
+  <path d="M124 182c57-24 108-23 152 5" fill="none" stroke="#d8b4fe" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="95" cy="86" r="9" fill="#d8b4fe"/><circle cx="62" cy="138" r="7" fill="#d8b4fe"/><circle cx="103" cy="240" r="8" fill="#d8b4fe"/>
+  <path d="M50 197c26 18 52 20 81 6" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">NOSE</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Allergic rhinitis</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Nose patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

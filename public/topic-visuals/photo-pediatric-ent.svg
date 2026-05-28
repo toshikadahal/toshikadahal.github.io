@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1f45"/>
+      <stop offset=".55" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#93c5fd" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#93c5fd" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(555 60)">
+  <circle cx="220" cy="135" r="92" fill="#f4b892" opacity=".94"/>
+  <circle cx="123" cy="129" r="36" fill="#ffe0ca" opacity=".9"/>
+  <circle cx="316" cy="129" r="36" fill="#ffe0ca" opacity=".9"/>
+  <path d="M172 169c33 30 65 30 98 0" fill="none" stroke="#32130d" stroke-width="10" stroke-linecap="round"/>
+  <path d="M109 359c18-74 61-113 112-113s94 39 112 113" fill="#f4b892" opacity=".8"/>
+  <circle cx="185" cy="121" r="9" fill="#1f130d"/>
+  <circle cx="255" cy="121" r="9" fill="#1f130d"/>
+  <path d="M343 245c34 23 52 57 54 103" fill="none" stroke="#93c5fd" stroke-width="12" stroke-linecap="round"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">CHILD ENT</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Paediatric ENT</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Children patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

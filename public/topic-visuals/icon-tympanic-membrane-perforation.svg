@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#07202d"/>
+      <stop offset="1" stop-color="#0b4a5a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".76" cy=".18" r=".75">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity=".36"/>
+      <stop offset=".55" stop-color="#67e8f9" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="420" height="300" rx="42" fill="url(#bg)"/>
+  <rect width="420" height="300" rx="42" fill="url(#glow)"/>
+  <circle cx="60" cy="245" r="105" fill="#ffffff" opacity=".05"/>
+  <g transform="translate(-470 -55) scale(.52)"><g transform="translate(610 70)">
+  <circle cx="190" cy="190" r="150" fill="#f2b28c" opacity=".92"/>
+  <circle cx="190" cy="190" r="115" fill="#ffdbc7" opacity=".65"/>
+  <circle cx="190" cy="190" r="78" fill="#f8c7b1" opacity=".86"/>
+  <path d="M117 178c46-58 106-68 163-23" fill="none" stroke="#fff3ec" stroke-width="10" opacity=".75"/>
+  <path d="M156 224c43 29 95 23 132-17" fill="none" stroke="#c47e67" stroke-width="12" opacity=".65"/>
+  <path d="M185 171c45-24 83 1 85 43 3 57-67 83-102 36-25-32-18-64 17-79Z" fill="#180807"/>
+  <path d="M204 170c36-7 61 16 55 52" fill="none" stroke="#ffb199" stroke-width="7" opacity=".68"/>
+  <circle cx="190" cy="190" r="151" fill="none" stroke="#67e8f9" stroke-width="5" opacity=".35"/>
+</g></g>
+  <text x="30" y="42" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="8" fill="#ffffff" opacity=".70">EAR</text>
+  <text x="30" y="265" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#ffffff" opacity=".94">Ear</text>
+</svg>
