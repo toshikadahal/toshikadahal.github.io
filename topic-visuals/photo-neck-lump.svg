@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#09251a"/>
+      <stop offset=".55" stop-color="#14532d"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#86efac" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#86efac" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(560 60)">
+  <path d="M216 35c77 0 129 55 129 129 0 44-20 78-54 100v75H141v-75c-34-22-54-56-54-100 0-74 52-129 129-129Z" fill="#e8a38a" opacity=".9"/>
+  <path d="M144 348c35 38 113 38 148 0" fill="none" stroke="#ffd8ca" stroke-width="27" stroke-linecap="round"/>
+  <circle cx="317" cy="242" r="42" fill="#ef4444" opacity=".88"/>
+  <circle cx="318" cy="242" r="67" fill="#ef4444" opacity=".2"/>
+  <path d="M189 174c25 18 54 18 79 0" fill="none" stroke="#32130d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M276 243h84" stroke="#86efac" stroke-width="8" stroke-linecap="round" opacity=".82"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">HEAD NECK</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Neck lump</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Head and neck patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

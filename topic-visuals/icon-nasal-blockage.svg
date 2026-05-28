@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#24113d"/>
+      <stop offset="1" stop-color="#7c2d6d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".76" cy=".18" r=".75">
+      <stop offset="0" stop-color="#d8b4fe" stop-opacity=".36"/>
+      <stop offset=".55" stop-color="#d8b4fe" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="420" height="300" rx="42" fill="url(#bg)"/>
+  <rect width="420" height="300" rx="42" fill="url(#glow)"/>
+  <circle cx="60" cy="245" r="105" fill="#ffffff" opacity=".05"/>
+  <g transform="translate(-470 -55) scale(.52)"><g transform="translate(590 60)">
+  <path d="M200 20c46 93 83 158 118 231 20 43-6 83-57 91-65 11-133-18-171-64" fill="#f0b9a4" opacity=".94"/>
+  <path d="M196 91c26 72 43 118 75 181" fill="none" stroke="#7f1d1d" stroke-width="11" stroke-linecap="round" opacity=".72"/>
+  <path d="M127 235c46 21 100 30 150 11" fill="none" stroke="#fff3e6" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+  <path d="M166 166c-29 20-44 55-45 100" fill="none" stroke="#d8b4fe" stroke-width="12" stroke-linecap="round"/>
+  <path d="M225 170c25 18 41 49 45 86" fill="none" stroke="#f97316" stroke-width="10" stroke-linecap="round" opacity=".82"/>
+</g></g>
+  <text x="30" y="42" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="8" fill="#ffffff" opacity=".70">NOSE</text>
+  <text x="30" y="265" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#ffffff" opacity=".94">Nose</text>
+</svg>

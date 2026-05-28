@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#09251a"/>
+      <stop offset=".55" stop-color="#14532d"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#86efac" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#86efac" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(555 60)">
+  <path d="M214 35c72 0 121 50 121 117 0 40-19 72-50 92v101H144V244c-32-20-50-52-50-92 0-67 48-117 120-117Z" fill="#e8a38a" opacity=".9"/>
+  <path d="M153 281c37-50 88-50 125 0" fill="none" stroke="#be123c" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="175" cy="294" r="43" fill="#f97316" opacity=".76"/>
+  <circle cx="257" cy="294" r="43" fill="#f97316" opacity=".76"/>
+  <circle cx="303" cy="259" r="31" fill="#ef4444" opacity=".9"/>
+  <path d="M160 350c40 22 91 22 131 0" fill="none" stroke="#86efac" stroke-width="11" stroke-linecap="round"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">HEAD NECK</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Thyroid nodules and goiter</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Head and neck patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2b0d16"/>
+      <stop offset="1" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".76" cy=".18" r=".75">
+      <stop offset="0" stop-color="#fb7185" stop-opacity=".36"/>
+      <stop offset=".55" stop-color="#fb7185" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="420" height="300" rx="42" fill="url(#bg)"/>
+  <rect width="420" height="300" rx="42" fill="url(#glow)"/>
+  <circle cx="60" cy="245" r="105" fill="#ffffff" opacity=".05"/>
+  <g transform="translate(-470 -55) scale(.52)"><g transform="translate(560 62)">
+  <path d="M207 37v94c0 50-36 72-50 118-8 25-1 50 18 75" fill="none" stroke="#ffd2c4" stroke-width="24" stroke-linecap="round"/>
+  <path d="M247 37v94c0 50 36 72 50 118 8 25 1 50-18 75" fill="none" stroke="#ffd2c4" stroke-width="24" stroke-linecap="round"/>
+  <path d="M183 272c38-50 79-50 118 0" fill="none" stroke="#fb7185" stroke-width="18" stroke-linecap="round"/>
+  <path d="M192 333c30 22 69 22 99 0" fill="none" stroke="#fb7185" stroke-width="11" stroke-linecap="round"/>
+  <path d="M153 320c-38-45-28-90 15-122" fill="none" stroke="#f97316" stroke-width="12" stroke-linecap="round"/>
+  <path d="M139 231l31-33 7 44" fill="none" stroke="#f97316" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g></g>
+  <text x="30" y="42" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="8" fill="#ffffff" opacity=".70">THROAT</text>
+  <text x="30" y="265" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#ffffff" opacity=".94">Throat</text>
+</svg>

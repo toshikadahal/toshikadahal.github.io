@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#17113a"/>
+      <stop offset=".55" stop-color="#4c1d95"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#c4b5fd" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#c4b5fd" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(560 56)">
+  <path d="M202 24c43 90 79 152 112 222 18 39-7 77-54 85-62 10-126-17-162-61" fill="#ddd6fe" opacity=".9"/>
+  <path d="M122 104c45-39 94-47 146-20" fill="none" stroke="#c4b5fd" stroke-width="12" stroke-linecap="round"/>
+  <path d="M188 160c-18 42-9 77 22 105" fill="none" stroke="#60a5fa" stroke-width="12" stroke-linecap="round"/>
+  <path d="M210 267c5 34-8 65-38 94" fill="none" stroke="#38bdf8" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="172" cy="370" r="18" fill="#38bdf8" opacity=".9"/>
+  <path d="M70 70c55-55 130-70 206-40" fill="none" stroke="#ddd6fe" stroke-width="9" stroke-linecap="round" opacity=".76"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">ADVANCED</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">CSF leak and skull base</tspan><tspan x="72" y="382">awareness</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Advanced ENT patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

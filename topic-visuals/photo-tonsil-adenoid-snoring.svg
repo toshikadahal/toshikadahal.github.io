@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2b0d16"/>
+      <stop offset=".55" stop-color="#7f1d1d"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#fb7185" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#fb7185" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(550 58)">
+  <path d="M110 60c64-38 164-38 228 0 20 83-5 177-114 214C115 237 90 143 110 60Z" fill="#f2a08a" opacity=".92"/>
+  <path d="M140 92c41 55 40 103-1 156" fill="none" stroke="#7f1d1d" stroke-width="20" stroke-linecap="round"/>
+  <path d="M308 92c-41 55-40 103 1 156" fill="none" stroke="#7f1d1d" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="176" cy="175" r="37" fill="#ef4444" opacity=".78"/>
+  <circle cx="272" cy="175" r="37" fill="#ef4444" opacity=".78"/>
+  <path d="M188 289c27 31 47 31 74 0" fill="none" stroke="#fb7185" stroke-width="12" stroke-linecap="round"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">THROAT</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Tonsils, adenoids, snoring,</tspan><tspan x="72" y="382">and sleep</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Throat patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

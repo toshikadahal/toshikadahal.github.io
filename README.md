@@ -13,8 +13,10 @@ This website presents professional information, consultation details, ENT patien
 ## Website sections
 
 - Scrollytelling introduction with image sequence background
-- Short main page with topic cards
+- Realistic AI-generated ENT topic images
+- Short main page topic cards
 - Detailed ENT topic pages
+- Fixed back-to-topics button on subpages
 - Schedule and contact together
 - Research and teaching interests
 - Dark and light theme toggle
@@ -63,4 +65,4 @@ Viewing this repository on GitHub does not grant permission to reuse the website
 
 A backup branch was created before this push:
 
-backup-before-light-hover-fix-20260528-084554
+backup-before-final-push-20260528-120103

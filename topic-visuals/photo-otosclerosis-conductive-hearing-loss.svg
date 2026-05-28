@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#07202d"/>
+      <stop offset=".55" stop-color="#0b4a5a"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#67e8f9" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(575 74)">
+  <path d="M150 48c-60 0-108 48-108 108 0 65 43 108 100 108 38 0 68-23 68-57 0-30-18-44-43-60-20-13-33-24-33-46 0-19 14-34 34-34s34 15 34 34" fill="none" stroke="#ffdbc7" stroke-width="24" stroke-linecap="round"/>
+  <path d="M225 148c45 8 86 35 121 81" fill="none" stroke="#fbbf24" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="236" cy="150" r="21" fill="#fef3c7" opacity=".95"/>
+  <circle cx="291" cy="188" r="19" fill="#fef3c7" opacity=".88"/>
+  <path d="M346 228l51 2" stroke="#67e8f9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M398 230l-21 21" stroke="#67e8f9" stroke-width="10" stroke-linecap="round"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">EAR</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Otosclerosis and conductive</tspan><tspan x="72" y="382">hearing loss</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Ear patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#07202d"/>
+      <stop offset=".55" stop-color="#0b4a5a"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".25" r=".72">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity=".32"/>
+      <stop offset=".48" stop-color="#67e8f9" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#glow)"/>
+  <circle cx="1040" cy="100" r="210" fill="#ffffff" opacity=".06" filter="url(#soft)"/>
+  <circle cx="120" cy="655" r="260" fill="#ffffff" opacity=".035" filter="url(#soft)"/>
+  <g transform="translate(610 70)">
+  <circle cx="190" cy="190" r="150" fill="#f2b28c" opacity=".92"/>
+  <circle cx="190" cy="190" r="115" fill="#ffdbc7" opacity=".65"/>
+  <circle cx="190" cy="190" r="78" fill="#f8c7b1" opacity=".86"/>
+  <path d="M117 178c46-58 106-68 163-23" fill="none" stroke="#fff3ec" stroke-width="10" opacity=".75"/>
+  <path d="M156 224c43 29 95 23 132-17" fill="none" stroke="#c47e67" stroke-width="12" opacity=".65"/>
+  <path d="M185 171c45-24 83 1 85 43 3 57-67 83-102 36-25-32-18-64 17-79Z" fill="#180807"/>
+  <path d="M204 170c36-7 61 16 55 52" fill="none" stroke="#ffb199" stroke-width="7" opacity=".68"/>
+  <circle cx="190" cy="190" r="151" fill="none" stroke="#67e8f9" stroke-width="5" opacity=".35"/>
+</g>
+  <text x="72" y="90" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="10" fill="#ffffff" opacity=".58">EAR</text>
+  <text font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850" fill="#ffffff" letter-spacing="-1">
+    <tspan x="72" y="318">Tympanic membrane</tspan><tspan x="72" y="382">perforation</tspan>
+  </text>
+  <text x="72" y="612" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity=".70">Ear patient education</text>
+  <text x="72" y="654" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5" fill="#ffffff" opacity=".42">DR. ANUJ DEVKOTA | ENT HEAD AND NECK SURGERY</text>
+</svg>
