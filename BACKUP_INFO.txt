@@ -1,5 +1,5 @@
 Backup branch created before final website push:
-backup-before-short-topic-pages-20260528-083357
+backup-before-light-hover-fix-20260528-084554
 
 Published from:
 C:\Users\nazar\Desktop\ent-scrolly-trial
@@ -18,5 +18,5 @@ git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-si
 cd reset-anuj-site
 git fetch origin
 git checkout main
-git reset --hard origin/backup-before-short-topic-pages-20260528-083357
+git reset --hard origin/backup-before-light-hover-fix-20260528-084554
 git push --force-with-lease origin main

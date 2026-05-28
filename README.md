@@ -63,4 +63,4 @@ Viewing this repository on GitHub does not grant permission to reuse the website
 
 A backup branch was created before this push:
 
-backup-before-short-topic-pages-20260528-083357
+backup-before-light-hover-fix-20260528-084554
