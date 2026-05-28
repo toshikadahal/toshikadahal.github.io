@@ -9,6 +9,7 @@ https://anujdevkota.github.io/
 ## Website sections
 
 - Scrollytelling introduction
+- Small animated scroll arrow on first screen
 - ENT topic cards
 - Detailed ENT topic pages
 - Dark and light theme toggle
@@ -29,4 +30,4 @@ This repository is public for GitHub Pages hosting. The source code, design, tex
 
 Backup branch created before this push:
 
-backup-before-push-20260528-123612
+backup-before-scroll-arrow-20260528-132628
