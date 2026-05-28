@@ -1,14 +1,16 @@
-Backup branch created before title update:
-backup-before-title-update-20260527-133855
-
-Published title:
-Dr. Anuj Devkota, ENT Head and Neck Surgeon | Asst. Professor | Teaching Hospital | Maharajgunj
+Backup branch created before final website push:
+backup-before-short-topic-pages-20260528-083357
 
 Published from:
 C:\Users\nazar\Desktop\ent-scrolly-trial
 
+Image sequence used:
+C:\Users\nazar\Desktop\ent-scrolly-trial\public\sequence
+
 Frames used:
 40
+
+README.md and LICENSE were kept in this GitHub push.
 
 To reset:
 
@@ -16,5 +18,5 @@ git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-si
 cd reset-anuj-site
 git fetch origin
 git checkout main
-git reset --hard origin/backup-before-title-update-20260527-133855
+git reset --hard origin/backup-before-short-topic-pages-20260528-083357
 git push --force-with-lease origin main
