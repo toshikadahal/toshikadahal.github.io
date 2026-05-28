@@ -96,6 +96,12 @@ function StickyNav() {
     document.documentElement.dataset.theme = nextTheme;
   };
 
+  const rightNavItems = [
+    { label: "About", href: "#about" },
+    { label: "Topics", href: "#topics" },
+    { label: "Research", href: "#research" }
+  ];
+
   return (
     <div className={`fixed left-0 right-0 top-3 z-[9999] px-3 transition-all duration-500 md:px-6 ${showNav ? "translate-y-0 opacity-100" : "-translate-y-8 pointer-events-none opacity-0"}`}>
       <nav className="mx-auto max-w-7xl rounded-full border border-white/20 bg-black/45 px-3 py-3 text-white shadow-2xl shadow-black/40 ring-1 ring-white/15 backdrop-blur-2xl md:px-5">
@@ -144,20 +150,15 @@ function StickyNav() {
             </span>
           </button>
 
-          <a href="#top-content" className="flex shrink-0 items-center gap-3 rounded-full px-1 md:mr-8">
-            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white/12 text-base font-extrabold text-white">
-              AD
-            </span>
-            <span className="hidden min-w-0 md:block">
-              <span className="block truncate text-base font-extrabold leading-5 text-white drop-shadow md:text-lg">
-                Dr. Anuj Devkota
-              </span>
-              <span className="block truncate text-sm font-medium text-white/75 drop-shadow">MS ENT</span>
-            </span>
+          <a
+            href="#schedule-contact"
+            className="nav-contact-main flex shrink-0 items-center rounded-full border px-5 py-3 text-sm font-extrabold shadow-xl transition hover:-translate-y-0.5 md:px-6 md:text-base"
+          >
+            Contact Dr. Anuj Devkota
           </a>
 
           <div className="ml-auto flex shrink-0 items-center gap-2 md:gap-5 lg:gap-7">
-            {navItems.map(item => (
+            {rightNavItems.map(item => (
               <a
                 key={item.href}
                 href={item.href}
