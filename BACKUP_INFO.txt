@@ -1,6 +1,6 @@
 Backup branch created before this push:
 
-backup-before-scroll-arrow-20260528-132628
+backup-before-final-nav-20260528-160241
 
 To reset:
 
@@ -8,5 +8,5 @@ git clone https://github.com/anujdevkota/anujdevkota.github.io.git reset-anuj-si
 cd reset-anuj-site
 git fetch origin
 git checkout main
-git reset --hard origin/backup-before-scroll-arrow-20260528-132628
+git reset --hard origin/backup-before-final-nav-20260528-160241
 git push --force-with-lease origin main

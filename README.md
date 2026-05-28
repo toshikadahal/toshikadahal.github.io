@@ -1,6 +1,6 @@
 # Dr. Anuj Devkota
 
-Official website of Dr. Anuj Devkota, ENT Head and Neck Surgeon and Assistant Professor at Teaching Hospital, Maharajgunj, Nepal.
+Official website of Dr. Anuj Devkota, ENT, Head and Neck Surgeon and Assistant Professor at Teaching Hospital, Maharajgunj, Nepal.
 
 Live website:
 
@@ -12,6 +12,10 @@ https://anujdevkota.github.io/
 - Small animated scroll arrow on first screen
 - ENT topic cards
 - Detailed ENT topic pages
+- Credentials block
+- Appointment buttons
+- Google Maps links
+- Urgent ENT care guidance
 - Dark and light theme toggle
 - Mobile navigation
 - Fixed back to topics button on subpages
@@ -26,8 +30,8 @@ Information on this website is for general educational purposes only. It does no
 
 Copyright 2026 Dr. Anuj Devkota. All rights reserved.
 
-This repository is public for GitHub Pages hosting. The source code, design, text, images, animations, layout, and assets may not be copied, modified, redistributed, or reused without prior written permission.
+This repository is public for website hosting. The source code, design, text, images, animations, layout, and assets may not be copied, modified, redistributed, or reused without prior written permission.
 
 Backup branch created before this push:
 
-backup-before-scroll-arrow-20260528-132628
+backup-before-final-nav-20260528-160241
