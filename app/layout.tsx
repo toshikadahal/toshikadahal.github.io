@@ -1,4 +1,4 @@
-﻿import ScrollToTopButton from "../components/ScrollToTopButton";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -81,8 +81,7 @@ export default function RootLayout({
           }}
         />
         {children}
-              <ScrollToTopButton />
-      </body>
+</body>
     </html>
   );
 }
