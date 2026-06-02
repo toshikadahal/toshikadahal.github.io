@@ -19,7 +19,7 @@ export default function ScrollDownHint() {
   return (
     <div
       aria-hidden="true"
-      className={`fixed bottom-6 left-1/2 z-[9997] -translate-x-1/2 transition-all duration-500 ${
+      className={`fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] left-1/2 z-[9997] -translate-x-1/2 transition-all duration-500 sm:bottom-6 ${
         showHint ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-8 opacity-0"
       }`}
     >

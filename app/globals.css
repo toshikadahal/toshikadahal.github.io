@@ -547,3 +547,145 @@ html[data-theme="light"] .nav-contact-main:hover {
   }
 }
 /* CONTACT BUTTON THEME MATCH END */
+
+/* RESPONSIVE FLUID POLISH START */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: clamp(5.5rem, 10vw, 8rem);
+}
+
+body {
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@supports (height: 100svh) {
+  .scrolly-hero .sticky {
+    height: 100svh !important;
+  }
+}
+
+.responsive-shell {
+  width: min(100%, 88rem);
+}
+
+.fluid-card {
+  overflow-wrap: anywhere;
+}
+
+.responsive-topic-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.75rem), 1fr));
+}
+
+.ent-topic-card {
+  min-height: clamp(18.5rem, 30vw, 20.5rem) !important;
+}
+
+.ent-topic-card .ent-topic-image {
+  height: clamp(8rem, 20vw, 10rem) !important;
+}
+
+.ent-topic-title {
+  font-size: clamp(1.08rem, 1.55vw, 1.25rem) !important;
+}
+
+.ent-topic-short {
+  font-size: clamp(0.88rem, 1.2vw, 0.98rem) !important;
+}
+
+.category-strip {
+  margin-inline: -0.25rem;
+  padding-inline: 0.25rem;
+}
+
+.hero-title {
+  max-width: min(94vw, 76rem);
+}
+
+.hero-copy-card {
+  width: min(100%, 34rem);
+}
+
+@media (max-width: 1023px) {
+  .topic-detail-page > section {
+    padding-left: clamp(1rem, 4vw, 1.5rem) !important;
+    padding-right: clamp(1rem, 4vw, 1.5rem) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .scrolly-hero {
+    height: 380svh !important;
+  }
+
+  .scrolly-hero .sticky {
+    min-height: 100svh !important;
+  }
+
+  .hero-copy-card {
+    margin-inline: auto;
+  }
+
+  .topic-fixed-back {
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .section-header {
+    margin-bottom: 1.75rem !important;
+  }
+
+  .ent-topic-card {
+    min-height: auto !important;
+  }
+
+  .ent-topic-card .ent-topic-image {
+    height: clamp(10rem, 54vw, 14rem) !important;
+  }
+
+  .nav-contact-main {
+    max-width: min(14rem, 48vw);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .theme-mode-toggle {
+    letter-spacing: 0.12em !important;
+  }
+
+  .topic-detail-list-item,
+  .topic-detail-muted {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+/* RESPONSIVE FLUID POLISH END */

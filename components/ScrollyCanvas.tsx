@@ -74,6 +74,7 @@ export default function ScrollyCanvas() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
   const currentFrameRef = useRef(0);
+  const animationFrameRef = useRef<number | null>(null);
   const [loadedCount, setLoadedCount] = useState(0);
   const [allReady, setAllReady] = useState(false);
   const [firstFrameReady, setFirstFrameReady] = useState(false);
@@ -101,6 +102,17 @@ export default function ScrollyCanvas() {
     drawCover(context, image, canvas.clientWidth, canvas.clientHeight);
   };
 
+  const requestDrawFrame = (index: number) => {
+    if (animationFrameRef.current !== null) {
+      window.cancelAnimationFrame(animationFrameRef.current);
+    }
+
+    animationFrameRef.current = window.requestAnimationFrame(() => {
+      animationFrameRef.current = null;
+      drawFrame(index);
+    });
+  };
+
   useEffect(() => {
     let cancelled = false;
     let loaded = 0;
@@ -119,12 +131,12 @@ export default function ScrollyCanvas() {
 
         if (index === 0) {
           setFirstFrameReady(true);
-          drawFrame(0);
+          requestDrawFrame(0);
         }
 
         if (loaded === FRAME_SOURCES.length) {
           setAllReady(true);
-          drawFrame(currentFrameRef.current);
+          requestDrawFrame(currentFrameRef.current);
         }
       };
 
@@ -138,7 +150,7 @@ export default function ScrollyCanvas() {
 
         if (loaded === FRAME_SOURCES.length) {
           setAllReady(true);
-          drawFrame(currentFrameRef.current);
+          requestDrawFrame(currentFrameRef.current);
         }
       };
 
@@ -150,6 +162,10 @@ export default function ScrollyCanvas() {
 
     return () => {
       cancelled = true;
+      if (animationFrameRef.current !== null) {
+        window.cancelAnimationFrame(animationFrameRef.current);
+      }
+
       imagesRef.current = [];
     };
   }, []);
@@ -163,8 +179,9 @@ export default function ScrollyCanvas() {
       }
 
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const viewport = window.visualViewport;
+      const width = Math.round(viewport?.width || window.innerWidth);
+      const height = Math.round(viewport?.height || window.innerHeight);
 
       canvas.style.width = width + "px";
       canvas.style.height = height + "px";
@@ -178,13 +195,17 @@ export default function ScrollyCanvas() {
       }
 
       context.setTransform(dpr, 0, 0, dpr, 0, 0);
-      drawFrame(currentFrameRef.current);
+      requestDrawFrame(currentFrameRef.current);
     };
 
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
+    window.visualViewport?.addEventListener("resize", resizeCanvas);
 
-    return () => window.removeEventListener("resize", resizeCanvas);
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+      window.visualViewport?.removeEventListener("resize", resizeCanvas);
+    };
   }, []);
 
   useMotionValueEvent(scrollYProgress, "change", latest => {
@@ -194,15 +215,15 @@ export default function ScrollyCanvas() {
     );
 
     if (nextFrame !== currentFrameRef.current) {
-      drawFrame(nextFrame);
+      requestDrawFrame(nextFrame);
     }
   });
 
   const loadedPercent = Math.round((loadedCount / FRAME_SOURCES.length) * 100);
 
   return (
-    <section ref={sectionRef} className="scrolly-hero relative h-[520vh] bg-[#121212]">
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-[#121212]">
+    <section ref={sectionRef} className="scrolly-hero relative h-[420svh] bg-[#121212] sm:h-[520vh]">
+      <div className="sticky top-0 h-[100svh] min-h-[34rem] w-full overflow-hidden bg-[#121212]">
         <canvas
           ref={canvasRef}
           className={"absolute inset-0 h-full w-full transition-opacity duration-1000 " + (allReady ? "opacity-100" : "opacity-55")}

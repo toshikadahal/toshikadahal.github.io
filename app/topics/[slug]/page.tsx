@@ -84,12 +84,12 @@ function DetailSection({
   children: ReactNode;
 }) {
   return (
-    <section className="topic-detail-card rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-200/25 hover:bg-white/[0.075] hover:shadow-[0_0_60px_rgba(103,232,249,0.13)] md:p-9">
+    <section className="topic-detail-card rounded-[1.5rem] border border-white/10 bg-white/[0.055] p-5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-200/25 hover:bg-white/[0.075] hover:shadow-[0_0_60px_rgba(103,232,249,0.13)] sm:rounded-[2rem] sm:p-7 md:p-9">
       <p className="topic-detail-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-white/38">
         {eyebrow}
       </p>
 
-      <h2 className="topic-detail-heading text-3xl font-semibold tracking-[-0.04em] text-white md:text-4xl">
+      <h2 className="topic-detail-heading text-[clamp(1.7rem,5.5vw,2.25rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-white">
         {title}
       </h2>
 
@@ -106,7 +106,7 @@ function List({ items }: { items: string[] }) {
       {items.map(item => (
         <p
           key={item}
-          className="topic-detail-list-item rounded-2xl border border-white/10 bg-black/20 p-4 text-base leading-7 text-white/64 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-200/25 hover:bg-white/[0.075] hover:text-white hover:shadow-[0_0_35px_rgba(103,232,249,0.12)]"
+          className="topic-detail-list-item rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-7 text-white/68 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-200/25 hover:bg-white/[0.075] hover:text-white hover:shadow-[0_0_35px_rgba(103,232,249,0.12)] sm:text-base"
         >
           {item}
         </p>
@@ -124,12 +124,12 @@ export default function TopicDetailPage({
 
   if (!topic) {
     return (
-      <main className="topic-detail-page min-h-screen bg-[#121212] px-6 py-20 text-white">
+      <main className="topic-detail-page min-h-screen overflow-x-hidden bg-[#121212] px-4 py-20 text-white sm:px-6">
         <SubpageThemeToggle />
 
         <Link
           href="/#topics"
-          className="topic-fixed-back fixed left-8 top-28 z-[9998] inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-5 py-3 text-sm font-extrabold text-white shadow-2xl ring-1 ring-white/15 backdrop-blur-2xl transition hover:-translate-y-0.5 hover:border-cyan-200/30 hover:bg-black/85 hover:shadow-[0_0_45px_rgba(103,232,249,0.16)]"
+          className="topic-fixed-back fixed left-4 top-24 z-[9998] inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-4 py-2.5 text-xs font-extrabold text-white shadow-2xl ring-1 ring-white/15 backdrop-blur-2xl transition hover:-translate-y-0.5 hover:border-cyan-200/30 hover:bg-black/85 hover:shadow-[0_0_45px_rgba(103,232,249,0.16)] sm:left-8 sm:top-28 sm:px-5 sm:py-3 sm:text-sm"
         >
           <span aria-hidden="true">←</span>
           Back to topics
@@ -143,39 +143,39 @@ export default function TopicDetailPage({
   }
 
   return (
-    <main className="topic-detail-page min-h-screen bg-[#121212] text-white">
+    <main className="topic-detail-page min-h-screen overflow-x-hidden bg-[#121212] text-white">
       <SubpageThemeToggle />
 
       <Link
         href="/#topics"
-        className="topic-fixed-back fixed left-8 top-28 z-[9998] inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-5 py-3 text-sm font-extrabold text-white shadow-2xl ring-1 ring-white/15 backdrop-blur-2xl transition hover:-translate-y-0.5 hover:border-cyan-200/30 hover:bg-black/85 hover:shadow-[0_0_45px_rgba(103,232,249,0.16)]"
+        className="topic-fixed-back fixed left-4 top-24 z-[9998] inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-4 py-2.5 text-xs font-extrabold text-white shadow-2xl ring-1 ring-white/15 backdrop-blur-2xl transition hover:-translate-y-0.5 hover:border-cyan-200/30 hover:bg-black/85 hover:shadow-[0_0_45px_rgba(103,232,249,0.16)] sm:left-8 sm:top-28 sm:px-5 sm:py-3 sm:text-sm"
       >
         <span aria-hidden="true">←</span>
         Back to topics
       </Link>
 
-      <section className="relative overflow-hidden px-6 py-20 md:px-12">
+      <section className="relative overflow-hidden px-4 py-20 sm:px-6 md:px-12">
         <div className="topic-detail-glow pointer-events-none absolute inset-x-0 top-0 h-[32rem] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_62%)]" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.82fr] lg:items-start">
+        <div className="relative mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,0.82fr)] lg:items-start">
           <div>
-            <p className="topic-detail-eyebrow mt-14 text-sm font-semibold uppercase tracking-[0.35em] text-white/40">
+            <p className="topic-detail-eyebrow mt-14 text-xs font-semibold uppercase tracking-[0.28em] text-white/40 sm:text-sm sm:tracking-[0.35em]">
               {topic.category}
             </p>
 
-            <h1 className="topic-detail-heading mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.065em] text-white md:text-7xl">
+            <h1 className="topic-detail-heading mt-5 max-w-4xl text-[clamp(2.6rem,9vw,4.5rem)] font-semibold leading-[0.98] tracking-[-0.065em] text-white">
               {topic.title}
             </h1>
 
-            <p className="topic-detail-muted mt-7 max-w-3xl text-xl leading-9 text-white/70">
+            <p className="topic-detail-muted mt-6 max-w-3xl text-base leading-7 text-white/72 sm:mt-7 sm:text-xl sm:leading-9">
               {humanIntroForSlug(topic.slug, topic.title)}
             </p>
 
-            <p className="topic-detail-muted mt-5 max-w-3xl text-lg leading-8 text-white/58">
+            <p className="topic-detail-muted mt-5 max-w-3xl text-base leading-7 text-white/62 sm:text-lg sm:leading-8">
               {topic.overview}
             </p>
 
-            <div className="mt-12 grid gap-6">
+            <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6">
               <DetailSection eyebrow="01" title="Common symptoms">
                 <List items={topic.symptoms} />
               </DetailSection>
@@ -196,21 +196,21 @@ export default function TopicDetailPage({
                 <List items={topic.questions} />
               </DetailSection>
 
-              <section className="topic-detail-warning rounded-[2rem] border border-pink-400/20 bg-pink-500/[0.08] p-7 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-pink-200/40 hover:bg-pink-500/[0.12] hover:shadow-[0_0_65px_rgba(244,114,182,0.16)] md:p-9">
+              <section className="topic-detail-warning rounded-[1.5rem] border border-pink-400/20 bg-pink-500/[0.08] p-5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-pink-200/40 hover:bg-pink-500/[0.12] hover:shadow-[0_0_65px_rgba(244,114,182,0.16)] sm:rounded-[2rem] sm:p-7 md:p-9">
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-pink-200/70">
                   Warning signs
                 </p>
 
-                <h2 className="text-3xl font-semibold tracking-[-0.04em] text-pink-100 md:text-4xl">
+                <h2 className="text-[clamp(1.7rem,5.5vw,2.25rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-pink-100">
                   When to seek urgent care
                 </h2>
 
-                <p className="mt-6 rounded-2xl border border-pink-200/10 bg-black/20 p-5 text-lg leading-8 text-pink-50/78 transition duration-300 hover:border-pink-100/25 hover:bg-pink-200/[0.06]">
+                <p className="mt-5 rounded-2xl border border-pink-200/10 bg-black/20 p-4 text-base leading-7 text-pink-50/78 transition duration-300 hover:border-pink-100/25 hover:bg-pink-200/[0.06] sm:mt-6 sm:p-5 sm:text-lg sm:leading-8">
                   {topic.urgent}
                 </p>
               </section>
 
-              <section className="topic-detail-card rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 backdrop-blur-xl transition duration-300 hover:border-white/20 hover:bg-white/[0.075] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] md:p-9">
+              <section className="topic-detail-card rounded-[1.5rem] border border-white/10 bg-white/[0.055] p-5 backdrop-blur-xl transition duration-300 hover:border-white/20 hover:bg-white/[0.075] hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] sm:rounded-[2rem] sm:p-7 md:p-9">
                 <p className="topic-detail-muted text-sm leading-7 text-white/52">
                   This page is for general educational purposes only. It does not replace consultation with a qualified medical professional.
                 </p>
@@ -219,14 +219,16 @@ export default function TopicDetailPage({
           </div>
 
           <aside className="lg:sticky lg:top-28">
-            <div className="topic-detail-side overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.055] shadow-2xl shadow-black/35 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-200/25 hover:bg-white/[0.075] hover:shadow-[0_0_70px_rgba(103,232,249,0.14)]">
+            <div className="topic-detail-side overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.055] shadow-2xl shadow-black/35 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-200/25 hover:bg-white/[0.075] hover:shadow-[0_0_70px_rgba(103,232,249,0.14)] sm:rounded-[2.25rem]">
               <img
                 src={topicImage(topic.slug)}
                 alt={`${topic.title} patient education visual`}
-                className="h-[22rem] w-full object-cover md:h-[30rem] lg:h-[34rem]"
+                decoding="async"
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="h-[min(22rem,62vw)] min-h-[15rem] w-full object-cover md:h-[30rem] lg:h-[34rem]"
               />
 
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
                 <p className="topic-detail-eyebrow text-xs font-semibold uppercase tracking-[0.35em] text-white/38">
                   Patient education
                 </p>

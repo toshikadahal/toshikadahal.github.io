@@ -175,17 +175,17 @@ function StickyNav() {
 }
 function SectionHeader({ eyebrow, title, body }: { eyebrow: string; title: string; body?: string }) {
   return (
-    <div className="mb-10">
+    <div className="section-header mb-8 sm:mb-10">
       <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-white/40">{eyebrow}</p>
-      <h2 className="max-w-4xl text-4xl font-semibold tracking-[-0.055em] text-white md:text-6xl">{title}</h2>
-      {body && <p className="mt-5 max-w-3xl text-lg leading-8 text-white/58">{body}</p>}
+      <h2 className="max-w-4xl text-[clamp(2.25rem,7vw,3.75rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-white">{title}</h2>
+      {body && <p className="mt-5 max-w-3xl text-base leading-7 text-white/62 sm:text-lg sm:leading-8">{body}</p>}
     </div>
   );
 }
 
 function GlassCard({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`rounded-[2rem] border border-white/10 bg-white/[0.055] p-7 backdrop-blur-xl transition duration-300 hover:border-white/25 hover:bg-white/[0.085] hover:shadow-glow ${className}`}>
+    <div className={`fluid-card rounded-[1.5rem] border border-white/10 bg-white/[0.055] p-5 backdrop-blur-xl transition duration-300 hover:border-white/25 hover:bg-white/[0.085] hover:shadow-glow sm:rounded-[2rem] sm:p-7 ${className}`}>
       {children}
     </div>
   );
@@ -211,10 +211,10 @@ function CredentialsBlock() {
 
 function UrgentCareBlock() {
   return (
-    <section className="mb-24 rounded-[2rem] border border-rose-300/20 bg-rose-500/[0.08] p-7 shadow-2xl shadow-rose-950/20 backdrop-blur-xl md:p-9">
+    <section className="urgent-care-block mb-16 rounded-[1.5rem] border border-rose-300/20 bg-rose-500/[0.08] p-5 shadow-2xl shadow-rose-950/20 backdrop-blur-xl sm:mb-24 sm:rounded-[2rem] sm:p-7 md:p-9">
       <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-rose-100/70">Urgent ENT care</p>
-      <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white md:text-4xl">Seek urgent ENT care when symptoms are severe or sudden.</h2>
-      <p className="mt-5 max-w-5xl text-lg leading-8 text-rose-50/78">
+      <h2 className="text-[clamp(1.8rem,6vw,2.5rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-white">Seek urgent ENT care when symptoms are severe or sudden.</h2>
+      <p className="mt-5 max-w-5xl text-base leading-7 text-rose-50/78 sm:text-lg sm:leading-8">
         Seek urgent ENT care for sudden hearing loss, breathing difficulty, severe bleeding, facial weakness, severe throat pain, or a rapidly increasing neck swelling.
       </p>
     </section>
@@ -233,23 +233,23 @@ export default function FinalContent() {
   }, [category]);
 
   return (
-    <div id="top-content" className="relative overflow-visible bg-[#121212] text-white">
+    <div id="top-content" className="site-main-content relative overflow-x-hidden bg-[#121212] text-white">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[36rem] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.13),transparent_62%)]" />
       <StickyNav />
 
-      <div className="relative mx-auto max-w-7xl px-6 pb-28 pt-28 md:px-12">
-        <section id="about" className="mb-24 grid scroll-mt-32 gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+      <div className="responsive-shell relative mx-auto max-w-7xl px-4 pb-24 pt-20 sm:px-6 sm:pb-28 sm:pt-28 md:px-12">
+        <section id="about" className="mb-16 grid scroll-mt-28 gap-6 sm:mb-24 sm:scroll-mt-32 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div>
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-white/40">{profile.title}</p>
-            <h1 className="text-5xl font-semibold tracking-[-0.07em] text-white md:text-7xl">{profile.headline}</h1>
-            <p className="mt-6 max-w-3xl text-xl leading-9 text-white/62">{profile.intro}</p>
-            <p className="mt-5 max-w-3xl rounded-3xl border border-white/10 bg-white/[0.055] p-5 text-base leading-7 text-white/68">{profile.trust}</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-white/40 sm:mb-5 sm:text-sm sm:tracking-[0.35em]">{profile.title}</p>
+            <h1 className="text-[clamp(2.75rem,9vw,4.6rem)] font-semibold leading-[0.98] tracking-[-0.07em] text-white">{profile.headline}</h1>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-white/66 sm:mt-6 sm:text-xl sm:leading-9">{profile.intro}</p>
+            <p className="mt-5 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.055] p-4 text-base leading-7 text-white/68 sm:rounded-3xl sm:p-5">{profile.trust}</p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#schedule-contact" className="rounded-full border border-white/15 bg-white px-6 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.18)]">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href="#schedule-contact" className="inline-flex justify-center rounded-full border border-white/15 bg-white px-6 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.18)]">
                 Confirm appointment schedule
               </a>
-              <a href="#topics" className="rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/18">
+              <a href="#topics" className="inline-flex justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/18">
                 Browse ENT topics
               </a>
             </div>
@@ -260,36 +260,38 @@ export default function FinalContent() {
 
         <UrgentCareBlock />
 
-        <section id="topics" className="mb-24 scroll-mt-32">
+        <section id="topics" className="mb-16 scroll-mt-28 sm:mb-24 sm:scroll-mt-32">
           <SectionHeader
             eyebrow="ENT library"
             title="Short cards first. Detailed pages on click."
             body="Browse common ENT concerns through simple, patient-friendly education pages."
           />
 
-          <div className="mb-8 flex gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="category-strip mb-8 flex snap-x gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {categories.map(item => (
               <button
                 key={item}
                 type="button"
                 onClick={() => setCategory(item)}
-                className={`whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition ${category === item ? "border-white bg-white text-black" : "border-white/10 bg-white/10 text-white/70 hover:bg-white/15 hover:text-white"}`}
+                className={`snap-start whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition ${category === item ? "border-white bg-white text-black" : "border-white/10 bg-white/10 text-white/70 hover:bg-white/15 hover:text-white"}`}
               >
                 {item}
               </button>
             ))}
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          <div className="responsive-topic-grid grid gap-4">
             {visibleTopics.map((topic, index) => (
-              <Link key={topic.slug} href={`/topics/${topic.slug}`} className="group block">
-                <GlassCard className="ent-topic-card min-h-[20rem]">
-                  <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/20">
+              <Link key={topic.slug} href={`/topics/${topic.slug}`} className="group block h-full">
+                <GlassCard className="ent-topic-card flex h-full min-h-[19.5rem] flex-col">
+                  <div className="mb-5 overflow-hidden rounded-[1.25rem] border border-white/10 bg-black/20 sm:mb-6 sm:rounded-[1.5rem]">
                     <img
                       src={topicImage(topic.slug)}
                       alt={`${topic.title} patient education visual`}
                       className="ent-topic-image h-32 w-full object-cover transition duration-500 group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 20vw"
                     />
                   </div>
 
@@ -300,14 +302,14 @@ export default function FinalContent() {
 
                   <h3 className="ent-topic-title text-xl font-semibold tracking-tight transition group-hover:text-white">{topic.title}</h3>
                   <p className="ent-topic-short mt-3 text-sm leading-6 text-white/58">{topic.short}</p>
-                  <p className="ent-topic-open mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-white/40 transition group-hover:text-white/80">Open detailed page</p>
+                  <p className="ent-topic-open mt-auto pt-5 text-xs font-semibold uppercase tracking-[0.22em] text-white/40 transition group-hover:text-white/80">Open detailed page</p>
                 </GlassCard>
               </Link>
             ))}
           </div>
         </section>
 
-        <section id="schedule-contact" className="mb-24 scroll-mt-32">
+        <section id="schedule-contact" className="mb-16 scroll-mt-28 sm:mb-24 sm:scroll-mt-32">
           <SectionHeader eyebrow="Schedule and contact" title="Consultation schedule and professional contact" body="Clinic timing and contact details are placed together so patients can confirm availability quickly before visiting." />
 
           <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
@@ -321,10 +323,10 @@ export default function FinalContent() {
                     <p className="text-lg font-semibold">{clinic.days}</p>
                     <p className="mt-2 text-white/60">{clinic.time}</p>
                   </div>
-                                    <div className="mt-5 flex flex-wrap gap-3">
-                    <a href={`tel:${clinic.phone}`} className="inline-flex rounded-full border border-white/10 bg-white px-5 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.16)]">{clinic.callText}</a>
-                    <a href={clinic.mapUrl} target="_blank" rel="noopener noreferrer" className="inline-flex rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">{clinic.mapText}</a>
-                    <a href={`tel:${clinic.phone}`} className="inline-flex rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white/18">Phone {clinic.phone}</a>
+                                    <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                    <a href={`tel:${clinic.phone}`} className="inline-flex justify-center rounded-full border border-white/10 bg-white px-5 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.16)]">{clinic.callText}</a>
+                    <a href={clinic.mapUrl} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">{clinic.mapText}</a>
+                    <a href={`tel:${clinic.phone}`} className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white/18">Phone {clinic.phone}</a>
                   </div>
                 </GlassCard>
               ))}
@@ -335,14 +337,14 @@ export default function FinalContent() {
               <h3 className="text-3xl font-semibold tracking-tight">Professional contact and collaboration</h3>
               <p className="mt-4 leading-8 text-white/58">Please confirm appointment timing before visiting. For academic communication, collaboration, patient education projects, professional enquiries, or consultation schedule details, use the links below.</p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a href="tel:015225073" className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">Call Kalanki Polyclinic</a>
-                <a href="tel:015225101" className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">Call Nepal National Hospital</a>
-                <a href="mailto:anujdevkota@gmail.com" className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">anujdevkota@gmail.com</a>
-                <a href="mailto:anuj.devkota@mmc.tu.edu.np" className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">anuj.devkota@mmc.tu.edu.np</a>
-                <a href="https://wa.me/9779860319180" className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">WhatsApp 9860319180</a>
-                <a href="https://orcid.org/0000-0001-8188-399X" className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">ORCID</a>
-                <a href="https://www.youtube.com/@anujdevkota" className="rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">YouTube</a>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a href="tel:015225073" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">Call Kalanki Polyclinic</a>
+                <a href="tel:015225101" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">Call Nepal National Hospital</a>
+                <a href="mailto:anujdevkota@gmail.com" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">anujdevkota@gmail.com</a>
+                <a href="mailto:anuj.devkota@mmc.tu.edu.np" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">anuj.devkota@mmc.tu.edu.np</a>
+                <a href="https://wa.me/9779860319180" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">WhatsApp 9860319180</a>
+                <a href="https://orcid.org/0000-0001-8188-399X" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">ORCID</a>
+                <a href="https://www.youtube.com/@anujdevkota" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">YouTube</a>
               </div>
 
               <p className="mt-8 rounded-3xl border border-white/10 bg-black/20 p-5 leading-8 text-white/56">Medical disclaimer. Information on this website is for general educational purposes only. It does not replace consultation with a qualified medical professional.</p>
@@ -350,10 +352,10 @@ export default function FinalContent() {
           </div>
         </section>
 
-        <section id="research" className="mb-24 scroll-mt-32">
+        <section id="research" className="mb-16 scroll-mt-28 sm:mb-24 sm:scroll-mt-32">
           <SectionHeader eyebrow="Research and teaching" title="Academic interests" body="Research and teaching are kept concise here. Detailed academic pages can be added later." />
 
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {research.map((item, index) => (
               <GlassCard key={item}>
                 <p className="mb-8 text-sm font-semibold text-white/38">{String(index + 1).padStart(2, "0")}</p>
@@ -363,7 +365,7 @@ export default function FinalContent() {
           </div>
         </section>
 
-        <footer className="mt-20 border-t border-white/10 pt-8 text-sm leading-7 text-white/45">
+        <footer className="mt-16 border-t border-white/10 pt-8 text-sm leading-7 text-white/45 sm:mt-20">
           <p>Copyright 2026 Dr. Anuj Devkota. All rights reserved.</p>
           <p className="mt-2">ENT, Head and Neck Surgeon | Teaching Hospital, Maharajgunj | Patient education and academic information.</p>
         </footer>
