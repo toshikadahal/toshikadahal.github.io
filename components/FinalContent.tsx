@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
@@ -40,8 +40,9 @@ const schedule = [
     days: "Sunday, Tuesday and Thursday",
     time: "5:30 PM to 6:30 PM",
     phone: "015225073",
+    phoneDisplay: "01-5225073",
     callText: "Call Kalanki Polyclinic",
-    mapText: "Map Kalanki Polyclinic",
+    mapText: "Map location",
     mapUrl: "https://maps.app.goo.gl/q8VWKNcavWUgd4TD9"
   },
   {
@@ -50,11 +51,24 @@ const schedule = [
     days: "Monday, Wednesday and Friday",
     time: "5:30 PM to 6:30 PM",
     phone: "015225101",
+    phoneDisplay: "01-5225101",
     callText: "Call Nepal National Hospital",
-    mapText: "Map Nepal National Hospital",
+    mapText: "Map location",
     mapUrl: "https://maps.app.goo.gl/HAMDPyUMeAUnNpLGA"
+  },
+  {
+    title: "Teaching Hospital (ENT EHS service)",
+    location: "Maharajgunj, Kathmandu",
+    days: "Tuesday and Thursday",
+    time: "4:00 PM to 5:00 PM",
+    phone: "014513917",
+    phoneDisplay: "01-4513917",
+    callText: "Call Teaching Hospital EHS",
+    mapText: "Map location",
+    mapUrl: "https://maps.app.goo.gl/EXQ37tLGFQppmnPM9"
   }
 ];
+
 const research = [
   "Chronic otitis media, mastoid anatomy, tympanoplasty, and temporal bone surgical education.",
   "Rhinology, nasal irrigation, sinus symptoms, and patient-friendly ENT education.",
@@ -152,7 +166,7 @@ function StickyNav() {
 
           <a
             href="#schedule-contact"
-            className="nav-contact-main flex shrink-0 items-center rounded-full border px-5 py-3 text-sm font-extrabold shadow-xl transition hover:-translate-y-0.5 md:px-6 md:text-base"
+            className="nav-contact-main flex shrink-0 items-center rounded-full border px-4 py-2.5 text-xs font-extrabold shadow-xl transition hover:-translate-y-0.5 md:px-6 md:text-base"
           >
             Contact Dr. Anuj Devkota
           </a>
@@ -309,45 +323,132 @@ export default function FinalContent() {
           </div>
         </section>
 
-        <section id="schedule-contact" className="mb-16 scroll-mt-28 sm:mb-24 sm:scroll-mt-32">
-          <SectionHeader eyebrow="Schedule and contact" title="Consultation schedule and professional contact" body="Clinic timing and contact details are placed together so patients can confirm availability quickly before visiting." />
+        <section id="schedule-contact" className="mb-24 scroll-mt-32">
+          <SectionHeader
+            eyebrow="Schedule and contact"
+            title="Consultation schedule and professional contact"
+            body="Clinic timing and contact details are grouped into clear cards so patients can confirm availability before visiting."
+          />
 
-          <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="grid gap-5">
-              {schedule.map(clinic => (
-                <GlassCard key={clinic.title}>
-                  <p className="mb-3 text-sm uppercase tracking-[0.35em] text-white/38">Consultation clinic</p>
-                  <h3 className="text-3xl font-semibold tracking-tight">{clinic.title}</h3>
-                  <p className="mt-3 text-white/58">{clinic.location}</p>
-                  <div className="mt-6 rounded-3xl border border-white/10 bg-black/20 p-5">
-                    <p className="text-lg font-semibold">{clinic.days}</p>
-                    <p className="mt-2 text-white/60">{clinic.time}</p>
+              {schedule.map((clinic, index) => (
+                <GlassCard key={clinic.title} className="relative overflow-hidden !p-5 sm:!p-6">
+                  <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/[0.08] blur-2xl" />
+                  <div className="pointer-events-none absolute -bottom-20 left-8 h-32 w-32 rounded-full bg-white/[0.05] blur-2xl" />
+
+                  <div className="relative flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="min-w-0">
+                      <div className="mb-3 flex flex-wrap items-center gap-2">
+                        <span className="grid h-9 w-9 place-items-center rounded-2xl border border-white/10 bg-white/10 text-xs font-extrabold text-white/70">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className="rounded-full border border-white/10 bg-white/[0.08] px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-white/45">
+                          Consultation clinic
+                        </span>
+                      </div>
+
+                      <h3 className="text-[clamp(1.35rem,2vw,1.9rem)] font-semibold tracking-tight text-white">
+                        {clinic.title}
+                      </h3>
+
+                      <p className="mt-2 text-sm leading-6 text-white/58">
+                        {clinic.location}
+                      </p>
+                    </div>
+
+                    <div className="shrink-0 rounded-3xl border border-white/10 bg-black/25 px-4 py-3 text-left shadow-inner shadow-black/20 sm:min-w-[11rem]">
+                      <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-white/36">
+                        Time
+                      </p>
+                      <p className="mt-1 text-base font-semibold text-white">
+                        {clinic.time}
+                      </p>
+                    </div>
                   </div>
-                                    <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                    <a href={`tel:${clinic.phone}`} className="inline-flex justify-center rounded-full border border-white/10 bg-white px-5 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.16)]">{clinic.callText}</a>
-                    <a href={clinic.mapUrl} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">{clinic.mapText}</a>
-                    <a href={`tel:${clinic.phone}`} className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white/18">Phone {clinic.phone}</a>
+
+                  <div className="relative mt-5 rounded-3xl border border-white/10 bg-white/[0.055] p-4">
+                    <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-white/36">
+                      Available days
+                    </p>
+                    <p className="mt-1 text-base font-semibold leading-7 text-white/82">
+                      {clinic.days}
+                    </p>
+                  </div>
+
+                  <div className="relative mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                    <a
+                      href={`tel:${clinic.phone}`}
+                      className="inline-flex justify-center rounded-full border border-white/10 bg-white px-5 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.16)]"
+                    >
+                      {clinic.callText}
+                    </a>
+
+                    <a
+                      href={clinic.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black"
+                    >
+                      {clinic.mapText}
+                    </a>
+
+                    <a
+                      href={`tel:${clinic.phone}`}
+                      className="inline-flex justify-center rounded-full border border-white/10 bg-black/20 px-5 py-3 text-sm font-semibold text-white/70 transition hover:bg-white/12"
+                    >
+                      Phone {clinic.phoneDisplay}
+                    </a>
                   </div>
                 </GlassCard>
               ))}
             </div>
 
-            <GlassCard>
-              <p className="mb-3 text-sm uppercase tracking-[0.35em] text-white/38">Confirm appointment schedule</p>
-              <h3 className="text-3xl font-semibold tracking-tight">Professional contact and collaboration</h3>
-              <p className="mt-4 leading-8 text-white/58">Please confirm appointment timing before visiting. For academic communication, collaboration, patient education projects, professional enquiries, or consultation schedule details, use the links below.</p>
+            <GlassCard className="relative overflow-hidden !p-5 sm:!p-6 lg:sticky lg:top-28 lg:self-start">
+              <div className="pointer-events-none absolute -right-14 top-8 h-44 w-44 rounded-full bg-white/[0.08] blur-3xl" />
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <a href="tel:015225073" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">Call Kalanki Polyclinic</a>
-                <a href="tel:015225101" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">Call Nepal National Hospital</a>
-                <a href="mailto:anujdevkota@gmail.com" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">anujdevkota@gmail.com</a>
-                <a href="mailto:anuj.devkota@mmc.tu.edu.np" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">anuj.devkota@mmc.tu.edu.np</a>
-                <a href="https://wa.me/9779860319180" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">WhatsApp 9860319180</a>
-                <a href="https://orcid.org/0000-0001-8188-399X" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">ORCID</a>
-                <a href="https://www.youtube.com/@anujdevkota" className="inline-flex justify-center rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">YouTube</a>
+              <p className="mb-3 text-[0.68rem] font-bold uppercase tracking-[0.26em] text-white/38">
+                Quick contact
+              </p>
+
+              <h3 className="text-[clamp(1.35rem,2vw,1.9rem)] font-semibold tracking-tight">
+                Confirm before visiting
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-white/58">
+                Appointment times can change during holidays, emergency duties, academic programs, or hospital schedule changes. Please call before visiting.
+              </p>
+
+              <div className="mt-5 grid gap-2">
+                <a href="tel:015225073" className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">
+                  Kalanki Polyclinic 01-5225073
+                </a>
+                <a href="tel:015225101" className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">
+                  Nepal National Hospital 01-5225101
+                </a>
+                <a href="tel:014513917" className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold text-white/75 transition hover:bg-white hover:text-black">
+                  Teaching Hospital EHS 01-4513917
+                </a>
               </div>
 
-              <p className="mt-8 rounded-3xl border border-white/10 bg-black/20 p-5 leading-8 text-white/56">Medical disclaimer. Information on this website is for general educational purposes only. It does not replace consultation with a qualified medical professional.</p>
+              <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
+                <a href="mailto:anujdevkota@gmail.com" className="rounded-full border border-white/10 bg-black/20 px-4 py-2.5 text-center text-xs font-semibold text-white/70 transition hover:bg-white hover:text-black">
+                  Gmail
+                </a>
+                <a href="mailto:anuj.devkota@mmc.tu.edu.np" className="rounded-full border border-white/10 bg-black/20 px-4 py-2.5 text-center text-xs font-semibold text-white/70 transition hover:bg-white hover:text-black">
+                  Academic email
+                </a>
+                <a href="https://wa.me/9779860319180" className="rounded-full border border-white/10 bg-black/20 px-4 py-2.5 text-center text-xs font-semibold text-white/70 transition hover:bg-white hover:text-black">
+                  WhatsApp
+                </a>
+                <a href="https://orcid.org/0000-0001-8188-399X" className="rounded-full border border-white/10 bg-black/20 px-4 py-2.5 text-center text-xs font-semibold text-white/70 transition hover:bg-white hover:text-black">
+                  ORCID
+                </a>
+              </div>
+
+              <p className="mt-5 rounded-3xl border border-white/10 bg-black/20 p-4 text-sm leading-7 text-white/56">
+                Medical disclaimer. Information on this website is for general educational purposes only. It does not replace consultation with a qualified medical professional.
+              </p>
             </GlassCard>
           </div>
         </section>
