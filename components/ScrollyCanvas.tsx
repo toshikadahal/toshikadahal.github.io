@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
@@ -179,9 +179,10 @@ export default function ScrollyCanvas() {
       }
 
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const viewport = window.visualViewport;
-      const width = Math.round(viewport?.width || window.innerWidth);
-      const height = Math.round(viewport?.height || window.innerHeight);
+      const parent = canvas.parentElement;
+      const rect = parent?.getBoundingClientRect();
+      const width = Math.round(rect?.width || window.innerWidth);
+      const height = Math.round(rect?.height || window.innerHeight);
 
       canvas.style.width = width + "px";
       canvas.style.height = height + "px";
@@ -223,7 +224,7 @@ export default function ScrollyCanvas() {
 
   return (
     <section ref={sectionRef} className="scrolly-hero relative h-[420svh] bg-[#121212] sm:h-[520vh]">
-      <div className="sticky top-0 h-[100svh] min-h-[34rem] w-full overflow-hidden bg-[#121212]">
+      <div className="sticky top-0 h-[100dvh] min-h-[100dvh] w-full overflow-hidden bg-[#121212] sm:min-h-[34rem]">
         <canvas
           ref={canvasRef}
           className={"absolute inset-0 h-full w-full transition-opacity duration-1000 " + (allReady ? "opacity-100" : "opacity-55")}

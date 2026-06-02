@@ -689,3 +689,33 @@ a {
   }
 }
 /* RESPONSIVE FLUID POLISH END */
+
+/* MOBILE HERO BOTTOM GAP FIX START */
+@media (max-width: 760px) {
+  .scrolly-hero .sticky {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+  }
+
+  .scrolly-hero canvas {
+    display: block !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+  }
+}
+
+@supports not (height: 100dvh) {
+  @media (max-width: 760px) {
+    .scrolly-hero .sticky {
+      height: 100vh !important;
+      min-height: 100vh !important;
+      max-height: 100vh !important;
+    }
+
+    .scrolly-hero canvas {
+      height: 100vh !important;
+    }
+  }
+}
+/* MOBILE HERO BOTTOM GAP FIX END */
