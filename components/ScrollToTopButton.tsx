@@ -138,7 +138,7 @@ export default function ScrollToTopButton() {
         title="Go to top"
         onClick={scrollEverythingToTop}
       >
-        <span className="arrow-symbol">↑</span>
+        <span className="arrow-symbol">â†‘</span>
       </button>
 
       <style dangerouslySetInnerHTML={{
