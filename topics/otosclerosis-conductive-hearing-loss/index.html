@@ -5,12 +5,12 @@
     position: fixed;
     right: 24px;
     bottom: 24px;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 42px;
+    line-height: 40px;
     text-align: center;
     cursor: pointer;
     opacity: 0;
@@ -22,7 +22,7 @@
   }
 
   #scrollTopButtonOnly.theme-light {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.94);
     color: #0f172a;
     border: 1px solid rgba(15, 23, 42, 0.14);
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
@@ -43,14 +43,6 @@
     animation: bounceUpSmall 1.35s infinite;
   }
 
-  #scrollTopButtonOnly.theme-light:hover {
-    background: #ffffff;
-  }
-
-  #scrollTopButtonOnly.theme-dark:hover {
-    background: #1e293b;
-  }
-
   @keyframes bounceUpSmall {
     0%, 20%, 50%, 80%, 100% {
       transform: translateY(0);
@@ -67,10 +59,10 @@
     #scrollTopButtonOnly {
       right: 16px;
       bottom: 16px;
-      width: 38px;
-      height: 38px;
-      font-size: 19px;
-      line-height: 38px;
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+      line-height: 36px;
     }
   }
 </style>
@@ -82,69 +74,46 @@
   (function () {
     var topButton = document.getElementById("scrollTopButtonOnly");
 
-    function getServicesStart() {
-      var exploreElements = Array.prototype.slice.call(document.querySelectorAll("a, button, div, span"));
-      var explore = exploreElements.find(function (el) {
-        return el.textContent && el.textContent.trim().toLowerCase().indexOf("scroll to explore services") !== -1;
-      });
-
-      if (explore) {
-        return window.scrollY + explore.getBoundingClientRect().bottom + 160;
-      }
-
-      var serviceSection = document.getElementById("topics") || document.querySelector("[id*='topic'], [class*='topic'], [id*='service'], [class*='service']");
-
-      if (serviceSection) {
-        return window.scrollY + serviceSection.getBoundingClientRect().top - 80;
-      }
-
-      return Math.max(window.innerHeight * 0.88, 720);
-    }
-
     function detectTheme() {
-      var root = document.documentElement;
-      var themeWords = [
-        root.getAttribute("data-theme") || "",
+      var text = [
+        document.documentElement.getAttribute("data-theme") || "",
         document.body.getAttribute("data-theme") || "",
-        root.className || "",
+        document.documentElement.className || "",
         document.body.className || ""
       ].join(" ").toLowerCase();
 
-      if (/\bdark\b/.test(themeWords)) {
+      if (text.indexOf("dark") !== -1) {
         return "dark";
       }
 
-      if (/\blight\b/.test(themeWords)) {
+      if (text.indexOf("light") !== -1) {
         return "light";
       }
 
-      var textElements = Array.prototype.slice.call(document.querySelectorAll("button, a, div, span"));
-      var themeToggle = textElements.find(function (el) {
-        var text = el.textContent ? el.textContent.trim().toUpperCase() : "";
-        return text === "LIGHT" || text === "DARK";
+      var buttons = Array.prototype.slice.call(document.querySelectorAll("button, a, span, div"));
+      var themeToggle = buttons.find(function (el) {
+        var t = el.textContent ? el.textContent.trim().toUpperCase() : "";
+        return t === "LIGHT" || t === "DARK";
       });
 
       if (themeToggle) {
-        var toggleText = themeToggle.textContent.trim().toUpperCase();
-
-        if (toggleText === "LIGHT") {
+        var label = themeToggle.textContent.trim().toUpperCase();
+        if (label === "LIGHT") {
           return "dark";
         }
-
-        if (toggleText === "DARK") {
+        if (label === "DARK") {
           return "light";
         }
       }
 
       var bg = window.getComputedStyle(document.body).backgroundColor;
-      var match = bg.match(/\d+/g);
+      var nums = bg.match(/\d+/g);
 
-      if (match && match.length >= 3) {
-        var r = parseInt(match[0], 10);
-        var g = parseInt(match[1], 10);
-        var b = parseInt(match[2], 10);
+      if (nums && nums.length >= 3) {
+        var r = parseInt(nums[0], 10);
+        var g = parseInt(nums[1], 10);
+        var b = parseInt(nums[2], 10);
         var brightness = (r * 299 + g * 587 + b * 114) / 1000;
-
         return brightness < 128 ? "dark" : "light";
       }
 
@@ -165,9 +134,9 @@
     }
 
     function toggleTopButton() {
-      var servicesStart = getServicesStart();
+      var triggerPoint = Math.max(420, window.innerHeight * 0.65);
 
-      if (window.scrollY >= servicesStart - 20) {
+      if (window.scrollY > triggerPoint) {
         topButton.classList.add("show");
       } else {
         topButton.classList.remove("show");
@@ -184,32 +153,20 @@
     });
 
     document.addEventListener("click", function () {
-      setTimeout(updateButtonTheme, 80);
-      setTimeout(updateButtonTheme, 350);
-    });
-
-    var observer = new MutationObserver(function () {
-      updateButtonTheme();
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class", "data-theme", "style"]
-    });
-
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ["class", "data-theme", "style"]
+      setTimeout(updateButtonTheme, 100);
+      setTimeout(updateButtonTheme, 400);
     });
 
     window.addEventListener("scroll", toggleTopButton, { passive: true });
     window.addEventListener("resize", toggleTopButton);
-    setTimeout(toggleTopButton, 150);
+
+    setTimeout(toggleTopButton, 100);
     setTimeout(toggleTopButton, 700);
     toggleTopButton();
   })();
 </script>
 </body></html>
+
 
 
 
