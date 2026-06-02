@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 
@@ -7,72 +7,33 @@ export default function ScrollToTopButton() {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    function getScrollTop() {
-      const values = [
-        window.pageYOffset || 0,
-        document.documentElement ? document.documentElement.scrollTop || 0 : 0,
-        document.body ? document.body.scrollTop || 0 : 0
-      ];
-
-      document.querySelectorAll("main, section, div, body, html").forEach((el) => {
-        if (el && el.scrollTop) {
-          values.push(el.scrollTop);
-        }
-      });
-
-      return Math.max.apply(null, values);
-    }
-
     function detectTheme() {
-      const text = [
+      const themeText = [
         document.documentElement.getAttribute("data-theme") || "",
         document.body.getAttribute("data-theme") || "",
         document.documentElement.className || "",
         document.body.className || ""
       ].join(" ").toLowerCase();
 
-      if (text.indexOf("dark") !== -1) {
-        return "dark";
-      }
+      if (themeText.includes("dark")) return "dark";
+      if (themeText.includes("light")) return "light";
 
-      if (text.indexOf("light") !== -1) {
-        return "light";
-      }
-
-      const themeToggle = Array.from(document.querySelectorAll("button, a, span, div")).find((el) => {
-        const t = el.textContent ? el.textContent.trim().toUpperCase() : "";
-        return t === "LIGHT" || t === "DARK";
+      const toggle = Array.from(document.querySelectorAll("button, a, span, div")).find((el) => {
+        const text = el.textContent ? el.textContent.trim().toUpperCase() : "";
+        return text === "LIGHT" || text === "DARK";
       });
 
-      if (themeToggle) {
-        const label = themeToggle.textContent.trim().toUpperCase();
-
-        if (label === "LIGHT") {
-          return "dark";
-        }
-
-        if (label === "DARK") {
-          return "light";
-        }
-      }
-
-      const bg = window.getComputedStyle(document.body).backgroundColor;
-      const nums = bg.match(/\d+/g);
-
-      if (nums && nums.length >= 3) {
-        const r = parseInt(nums[0], 10);
-        const g = parseInt(nums[1], 10);
-        const b = parseInt(nums[2], 10);
-        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-
-        return brightness < 128 ? "dark" : "light";
+      if (toggle) {
+        const label = toggle.textContent ? toggle.textContent.trim().toUpperCase() : "";
+        if (label === "LIGHT") return "dark";
+        if (label === "DARK") return "light";
       }
 
       return "light";
     }
 
     function updateButton() {
-      const y = getScrollTop();
+      const y = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
       const triggerPoint = Math.max(620, window.innerHeight * 0.78);
 
       setVisible(y > triggerPoint);
@@ -82,49 +43,27 @@ export default function ScrollToTopButton() {
     updateButton();
 
     window.addEventListener("scroll", updateButton, { passive: true });
-    document.addEventListener("scroll", updateButton, { passive: true, capture: true });
     window.addEventListener("resize", updateButton);
+    document.addEventListener("scroll", updateButton, true);
 
     const timer = window.setInterval(updateButton, 500);
 
     return () => {
       window.removeEventListener("scroll", updateButton);
-      document.removeEventListener("scroll", updateButton, { capture: true });
       window.removeEventListener("resize", updateButton);
+      document.removeEventListener("scroll", updateButton, true);
       window.clearInterval(timer);
     };
   }, []);
 
-  function scrollEverythingToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+    document.body.scrollTo({ top: 0, behavior: "smooth" });
 
-    if (document.documentElement) {
-      document.documentElement.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
-
-    if (document.body) {
-      document.body.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
-
-    document.querySelectorAll("main, section, div").forEach((el) => {
-      if (el && el.scrollTop > 0) {
-        try {
-          el.scrollTo({
-            top: 0,
-            behavior: "smooth"
-          });
-        } catch {
-          el.scrollTop = 0;
-        }
+    document.querySelectorAll<HTMLElement>("main, section, div").forEach((el) => {
+      if (el.scrollTop > 0) {
+        el.scrollTo({ top: 0, behavior: "smooth" });
       }
     });
   }
@@ -132,18 +71,17 @@ export default function ScrollToTopButton() {
   return (
     <>
       <button
-        id="scrollTopButtonOnly"
-        className={`scroll-top-button-only theme-${theme} ${visible ? "show" : ""}`}
+        className={`scroll-top-button theme-${theme} ${visible ? "show" : ""}`}
         aria-label="Go to top"
         title="Go to top"
-        onClick={scrollEverythingToTop}
+        onClick={scrollToTop}
       >
-        <span className="arrow-symbol">â†‘</span>
+        <span className="arrow-symbol">{"\u2191"}</span>
       </button>
 
       <style dangerouslySetInnerHTML={{
         __html: `
-          .scroll-top-button-only {
+          .scroll-top-button {
             position: fixed !important;
             right: 22px !important;
             bottom: 22px !important;
@@ -162,48 +100,42 @@ export default function ScrollToTopButton() {
             z-index: 2147483647 !important;
           }
 
-          .scroll-top-button-only.theme-light {
+          .scroll-top-button.theme-light {
             background: rgba(255, 255, 255, 0.96) !important;
             color: #0f172a !important;
             border: 1px solid rgba(15, 23, 42, 0.16) !important;
             box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18) !important;
           }
 
-          .scroll-top-button-only.theme-dark {
+          .scroll-top-button.theme-dark {
             background: rgba(15, 23, 42, 0.96) !important;
             color: #ffffff !important;
-            border: 1px solid rgba(255, 255, 255, 0.20) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.36) !important;
           }
 
-          .scroll-top-button-only.show {
+          .scroll-top-button.show {
             opacity: 1 !important;
             visibility: visible !important;
             pointer-events: auto !important;
           }
 
-          .scroll-top-button-only .arrow-symbol {
+          .scroll-top-button .arrow-symbol {
             display: inline-block !important;
           }
 
-          .scroll-top-button-only.show .arrow-symbol {
+          .scroll-top-button.show .arrow-symbol {
             animation: bounceUpSmall 1.15s infinite !important;
           }
 
           @keyframes bounceUpSmall {
-            0%, 20%, 50%, 80%, 100% {
-              transform: translateY(0);
-            }
-            40% {
-              transform: translateY(-8px);
-            }
-            60% {
-              transform: translateY(-4px);
-            }
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-4px); }
           }
 
           @media (max-width: 640px) {
-            .scroll-top-button-only {
+            .scroll-top-button {
               right: 16px !important;
               bottom: 16px !important;
               width: 36px !important;
