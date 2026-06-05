@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -719,3 +719,35 @@ a {
   }
 }
 /* MOBILE HERO BOTTOM GAP FIX END */
+
+/* ABOUT CREDENTIAL ALIGNMENT FIX START */
+@media (min-width: 1024px) {
+  #about > div,
+  #about .grid {
+    align-items: flex-start !important;
+  }
+
+  #about > div > div,
+  #about .grid > div {
+    align-self: flex-start !important;
+  }
+
+  #about h2,
+  #about h2 + p,
+  #about [class*="max-w"] {
+    margin-top: 0 !important;
+  }
+}
+/* ABOUT CREDENTIAL ALIGNMENT FIX END */
+
+/* ABOUT TWO CARD ALIGNMENT START */
+@media (min-width: 1024px) {
+  #about .grid {
+    align-items: flex-start !important;
+  }
+
+  #about .grid > * {
+    align-self: flex-start !important;
+  }
+}
+/* ABOUT TWO CARD ALIGNMENT END */

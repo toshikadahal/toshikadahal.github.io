@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
@@ -12,7 +12,8 @@ const profile = {
   trust:
     "Patient-focused ENT care with clear explanations, evidence-based treatment, and careful follow-up.",
   institution: "Teaching Hospital, Maharajgunj",
-  position: "Assistant Professor, Department of ENT-HNS"
+  position: "Assistant Professor, Department of ENT-HNS",
+  experience: "7+ years of experience in ENT practice"
 };
 
 const credentials = [
@@ -206,18 +207,89 @@ function GlassCard({ children, className = "" }: { children: ReactNode; classNam
 }
 
 function CredentialsBlock() {
+  const experienceItem =
+    credentials.find((item) => item.includes("7+ years")) ||
+    "7+ years of experience in ENT practice";
+
   return (
-    <GlassCard>
-      <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-white/38">Credentials</p>
-      <div className="grid gap-3">
-        {credentials.map((item, index) => (
-          <p
-            key={item}
-            className={`leading-7 ${index === 0 ? "text-2xl font-semibold text-white" : "text-white/68"}`}
-          >
-            {item}
-          </p>
-        ))}
+    <GlassCard className="relative overflow-hidden !p-6 sm:!p-8">
+      <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/[0.08] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 left-10 h-44 w-44 rounded-full bg-white/[0.05] blur-3xl" />
+
+      <div className="relative">
+        <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-white/38">
+          Credentials
+        </p>
+
+        <div className="rounded-[1.8rem] border border-white/15 bg-white/[0.075] p-5 shadow-inner shadow-black/20 sm:p-6">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <div className="grid h-24 w-24 shrink-0 place-items-center rounded-[1.55rem] bg-white text-4xl font-black tracking-tight text-black shadow-[0_0_45px_rgba(255,255,255,0.15)]">
+              7+
+            </div>
+
+            <div>
+              <p className="text-[0.72rem] font-extrabold uppercase tracking-[0.24em] text-white/42">
+                Years in ENT practice
+              </p>
+              <p className="mt-2 text-xl font-semibold leading-8 text-white sm:text-2xl">
+                {experienceItem}
+              </p>
+              <p className="mt-2 text-sm leading-7 text-white/58">
+                Clinical ENT care, surgical work, teaching, and academic service.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 grid gap-3">
+          <div className="rounded-3xl border border-white/15 bg-white/[0.075] p-5 shadow-inner shadow-black/20">
+            <p className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Dr. Anuj Devkota
+            </p>
+            <p className="mt-2 text-base leading-7 text-white/62">
+              ENT, Head and Neck Surgeon
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="rounded-3xl border border-white/10 bg-black/20 p-5">
+              <p className="text-base leading-7 text-white/78">
+                Assistant Professor, Department of ENT-HNS
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-black/20 p-5">
+              <p className="text-base leading-7 text-white/78">
+                MBBS, MS ENT-HNS
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-black/20 p-5">
+              <p className="text-base leading-7 text-white/78">
+                NMC Registration No. 15288
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-black/20 p-5">
+              <p className="text-base leading-7 text-white/78">
+                ENT, head and neck surgery, teaching, and patient education
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/[0.055] p-5">
+            <div className="flex flex-wrap gap-2.5">
+              {["ENT care", "Head and neck", "Surgery", "Teaching", "Patient education"].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm font-semibold text-white/66"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </GlassCard>
   );
@@ -252,24 +324,51 @@ export default function FinalContent() {
       <StickyNav />
 
       <div className="responsive-shell relative mx-auto max-w-7xl px-4 pb-24 pt-20 sm:px-6 sm:pb-28 sm:pt-28 md:px-12">
-        <section id="about" className="mb-16 grid scroll-mt-28 gap-6 sm:mb-24 sm:scroll-mt-32 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-white/40 sm:mb-5 sm:text-sm sm:tracking-[0.35em]">{profile.title}</p>
-            <h1 className="text-[clamp(2.75rem,9vw,4.6rem)] font-semibold leading-[0.98] tracking-[-0.07em] text-white">{profile.headline}</h1>
-            <p className="mt-5 max-w-3xl text-base leading-7 text-white/66 sm:mt-6 sm:text-xl sm:leading-9">{profile.intro}</p>
-            <p className="mt-5 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.055] p-4 text-base leading-7 text-white/68 sm:rounded-3xl sm:p-5">{profile.trust}</p>
+        <section id="about" className="mb-16 grid scroll-mt-28 gap-6 sm:mb-24 sm:scroll-mt-32 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+          <GlassCard className="relative overflow-hidden !p-6 sm:!p-8">
+            <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-white/[0.08] blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-24 right-10 h-44 w-44 rounded-full bg-white/[0.05] blur-3xl" />
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href="#schedule-contact" className="inline-flex justify-center rounded-full border border-white/15 bg-white px-6 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.18)]">
-                Confirm appointment schedule
-              </a>
-              <a href="#topics" className="inline-flex justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/18">
-                Browse ENT topics
-              </a>
+            <div className="relative">
+              <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-white/38">
+                {profile.title}
+              </p>
+
+              <div className="rounded-[1.8rem] border border-white/15 bg-white/[0.075] p-5 shadow-inner shadow-black/20 sm:p-6">
+                <h1 className="text-[clamp(2.4rem,5vw,5rem)] font-semibold leading-[0.98] tracking-[-0.08em] text-white">
+                  {profile.headline}
+                </h1>
+
+                <p className="mt-5 max-w-2xl text-base leading-8 text-white/68 sm:text-lg">
+                  {profile.intro}
+                </p>
+              </div>
+
+              <div className="mt-4 rounded-3xl border border-white/10 bg-black/20 p-5">
+                <p className="text-sm leading-7 text-white/68">
+                  {profile.trust}
+                </p>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a
+                  href="#schedule-contact"
+                  className="rounded-full border border-white/15 bg-white px-5 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.18)]"
+                >
+                  Confirm appointment schedule
+                </a>
+
+                <a
+                  href="#topics"
+                  className="rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/18"
+                >
+                  Browse ENT topics
+                </a>
+              </div>
             </div>
-          </div>
+          </GlassCard>
 
-          <CredentialsBlock />
+<CredentialsBlock />
         </section>
 
         <UrgentCareBlock />
