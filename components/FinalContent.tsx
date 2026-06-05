@@ -276,19 +276,6 @@ function CredentialsBlock() {
               </p>
             </div>
           </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/[0.055] p-5">
-            <div className="flex flex-wrap gap-2.5">
-              {["ENT care", "Head and neck", "Surgery", "Teaching", "Patient education"].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm font-semibold text-white/66"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </GlassCard>
@@ -326,8 +313,8 @@ export default function FinalContent() {
       <div className="responsive-shell relative mx-auto max-w-7xl px-4 pb-24 pt-20 sm:px-6 sm:pb-28 sm:pt-28 md:px-12">
         <section id="about" className="mb-16 grid scroll-mt-28 gap-6 sm:mb-24 sm:scroll-mt-32 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
           <GlassCard className="relative overflow-hidden !p-6 sm:!p-8">
-            <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-white/[0.08] blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-24 right-10 h-44 w-44 rounded-full bg-white/[0.05] blur-3xl" />
+            <div className="pointer-events-none absolute -left-20 -top-20 h-52 w-52 rounded-full bg-white/[0.08] blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-24 right-10 h-40 w-40 rounded-full bg-white/[0.05] blur-3xl" />
 
             <div className="relative">
               <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-white/38">
@@ -335,32 +322,28 @@ export default function FinalContent() {
               </p>
 
               <div className="rounded-[1.8rem] border border-white/15 bg-white/[0.075] p-5 shadow-inner shadow-black/20 sm:p-6">
-                <h1 className="text-[clamp(2.4rem,5vw,5rem)] font-semibold leading-[0.98] tracking-[-0.08em] text-white">
-                  {profile.headline}
-                </h1>
+                <h2 className="max-w-3xl text-[clamp(2.15rem,4.2vw,4.4rem)] font-semibold leading-[1.04] tracking-[-0.065em] text-white">
+                  Clear ENT care, focused patient education, and academic surgical practice.
+                </h2>
 
-                <p className="mt-5 max-w-2xl text-base leading-8 text-white/68 sm:text-lg">
-                  {profile.intro}
+                <div className="mt-6 h-px w-full bg-white/10" />
+
+                <p className="mt-6 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
+                  Dr. Anuj Devkota is an ENT, Head and Neck Surgeon and Assistant Professor at Teaching Hospital, Maharajgunj. This website gives a short overview first, then detailed topic pages for patients who want to read more.
                 </p>
               </div>
 
-              <div className="mt-4 rounded-3xl border border-white/10 bg-black/20 p-5">
-                <p className="text-sm leading-7 text-white/68">
-                  {profile.trust}
-                </p>
-              </div>
-
-              <div className="mt-5 flex flex-wrap gap-3">
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <a
                   href="#schedule-contact"
-                  className="rounded-full border border-white/15 bg-white px-5 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.18)]"
+                  className="rounded-full border border-white/15 bg-white px-5 py-3 text-center text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(255,255,255,0.18)]"
                 >
                   Confirm appointment schedule
                 </a>
 
                 <a
                   href="#topics"
-                  className="rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/18"
+                  className="rounded-full border border-white/15 bg-white/10 px-5 py-3 text-center text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/18"
                 >
                   Browse ENT topics
                 </a>
