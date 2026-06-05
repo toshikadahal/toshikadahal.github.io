@@ -1,33 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://anujdevkota.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/final/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/ear-discharge-chronic-ear-disease/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/tympanic-membrane-perforation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/cholesteatoma/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/hearing-loss/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/tinnitus/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/vertigo-dizziness-balance/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/nasal-blockage/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/sinusitis/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/allergic-rhinitis/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/nosebleed-epistaxis/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/smell-loss/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/post-nasal-drip/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/hoarseness-voice-change/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/tonsil-adenoid-snoring/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/throat-reflux-lpr/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/swallowing-difficulty/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/neck-lump/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/thyroid-nodules-goiter/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/salivary-gland-swelling/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/head-neck-cancer-warning-signs/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/pediatric-ent/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/snoring-sleep-apnea/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/earwax-ear-blockage/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/swimmers-ear-otomycosis/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/otosclerosis-conductive-hearing-loss/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/facial-nerve-weakness/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/csf-leak-skull-base-awareness/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://anujdevkota.vercel.app/topics/ent-surgery-preparation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://anujdevkota.vercel.app/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>
