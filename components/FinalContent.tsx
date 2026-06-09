@@ -6,9 +6,9 @@ import { topicPages } from "@/data/topicPages";
 
 const profile = {
   title: "ENT Head and Neck Surgeon",
-  headline: "Clear ENT care, focused patient education, and academic surgical practice.",
+  headline: "ENT Doctor in Kathmandu, Nepal",
   intro:
-    "Dr. Anuj Devkota is an ENT, Head and Neck Surgeon and Assistant Professor at Teaching Hospital, Maharajgunj. This website gives a short overview first, then detailed topic pages for patients who want to read more.",
+    "Dr. Anuj Devkota is an ENT Doctor in Kathmandu, Nepal and Head and Neck Surgeon. He is Assistant Professor in the Department of ENT-HNS at Maharajgunj Medical Campus, TU Teaching Hospital. This website gives a short overview first, then detailed topic pages for patients who want to read more.",
   trust:
     "Patient-focused ENT care with clear explanations, evidence-based treatment, and careful follow-up.",
   institution: "Teaching Hospital, Maharajgunj",
@@ -18,7 +18,7 @@ const profile = {
 
 const credentials = [
   "Dr. Anuj Devkota",
-  "ENT, Head and Neck Surgeon",
+  "ENT Doctor in Kathmandu, Nepal",
   "Assistant Professor, Department of ENT-HNS",
   "Teaching Hospital, Maharajgunj",
   "MBBS, MS ENT-HNS",
@@ -247,7 +247,7 @@ function CredentialsBlock() {
               Dr. Anuj Devkota
             </p>
             <p className="mt-2 text-base leading-7 text-white/62">
-              ENT, Head and Neck Surgeon
+              ENT Doctor in Kathmandu, Nepal
             </p>
           </div>
 
@@ -323,13 +323,13 @@ export default function FinalContent() {
 
               <div className="rounded-[1.8rem] border border-white/15 bg-white/[0.075] p-5 shadow-inner shadow-black/20 sm:p-6">
                 <h2 className="max-w-3xl text-[clamp(2.15rem,4.2vw,4.4rem)] font-semibold leading-[1.04] tracking-[-0.065em] text-white">
-                  Clear ENT care, focused patient education, and academic surgical practice.
+                  ENT Doctor in Kathmandu, Nepal
                 </h2>
 
                 <div className="mt-6 h-px w-full bg-white/10" />
 
                 <p className="mt-6 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-                  Dr. Anuj Devkota is an ENT, Head and Neck Surgeon and Assistant Professor at Teaching Hospital, Maharajgunj. This website gives a short overview first, then detailed topic pages for patients who want to read more.
+                  Dr. Anuj Devkota is an ENT Doctor in Kathmandu, Nepal and Head and Neck Surgeon. He is Assistant Professor in the Department of ENT-HNS at Maharajgunj Medical Campus, TU Teaching Hospital. This website gives a short overview first, then detailed topic pages for patients who want to read more.
                 </p>
               </div>
 
@@ -550,7 +550,7 @@ export default function FinalContent() {
 
         <footer className="mt-16 border-t border-white/10 pt-8 text-sm leading-7 text-white/45 sm:mt-20">
           <p>Copyright 2026 Dr. Anuj Devkota. All rights reserved.</p>
-          <p className="mt-2">ENT, Head and Neck Surgeon | Teaching Hospital, Maharajgunj | Patient education and academic information.</p>
+          <p className="mt-2">ENT Doctor in Kathmandu, Nepal | Teaching Hospital, Maharajgunj | Patient education and academic information.</p>
         </footer>
       </div>
     </div>

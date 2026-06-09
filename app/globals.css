@@ -1,4 +1,5 @@
-﻿@tailwind base;
+﻿@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -751,3 +752,37 @@ a {
   }
 }
 /* ABOUT TWO CARD ALIGNMENT END */
+
+/* NEPALI FONT START */
+html.translated-ltr body,
+html.translated-rtl body,
+body.translated-ltr,
+body.translated-rtl {
+  font-family: "Noto Sans Devanagari", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+html.translated-ltr h1,
+html.translated-ltr h2,
+html.translated-ltr h3,
+html.translated-ltr p,
+html.translated-ltr a,
+html.translated-ltr button,
+html.translated-ltr span,
+html.translated-ltr div,
+html.translated-rtl h1,
+html.translated-rtl h2,
+html.translated-rtl h3,
+html.translated-rtl p,
+html.translated-rtl a,
+html.translated-rtl button,
+html.translated-rtl span,
+html.translated-rtl div {
+  font-family: "Noto Sans Devanagari", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  letter-spacing: normal;
+}
+
+html.translated-ltr .notranslate,
+html.translated-rtl .notranslate {
+  font-family: inherit !important;
+}
+/* NEPALI FONT END */
