@@ -1,3 +1,4 @@
+import SeoFooterLinks from "../components/SeoFooterLinks";
 import PhysicianSchema from "../components/PhysicianSchema";
 import LanguageToggle from "../components/LanguageToggle";
 import ScrollToTopButton from "../components/ScrollToTopButton";
@@ -89,6 +90,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <SeoFooterLinks />
         <ScrollToTopButton />
         <LanguageToggle />
 

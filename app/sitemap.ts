@@ -1,4 +1,4 @@
-﻿import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
 const baseUrl = "https://anujdevkota.vercel.app";
 
@@ -7,6 +7,7 @@ const routes = [
   "/topics/allergic-rhinitis",
   "/topics/cholesteatoma",
   "/topics/csf-leak-skull-base-awareness",
+  "/topics/ent-doctor-kathmandu-nepal",
   "/topics/ear-discharge-chronic-ear-disease",
   "/topics/earwax-ear-blockage",
   "/topics/ent-surgery-preparation",
