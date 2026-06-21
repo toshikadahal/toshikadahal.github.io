@@ -1,3 +1,4 @@
+import ProfessionalDevelopment from "../components/ProfessionalDevelopment";
 import ScrollyCanvas from "@/components/ScrollyCanvas";
 import FinalContent from "@/components/FinalContent";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <HideIntroNameOnScroll />
       <ScrollyCanvas />
       <FinalContent />
+      <ProfessionalDevelopment />
     </main>
   );
 }

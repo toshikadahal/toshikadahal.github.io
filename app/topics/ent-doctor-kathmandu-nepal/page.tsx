@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -60,7 +60,7 @@ const faqSchema = {
 
 export default function EntDoctorKathmanduNepalPage() {
   return (
-    <main className="min-h-screen bg-[#050505] px-5 py-24 text-white sm:px-8">
+    <main className="ent-doctor-seo-page min-h-screen bg-[#050505] px-5 py-24 text-white sm:px-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
