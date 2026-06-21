@@ -1,3 +1,4 @@
+import NearbyKalankiCard from "../../../components/NearbyKalankiCard";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -169,6 +170,8 @@ export default function EntDoctorKathmanduNepalPage() {
             ))}
           </div>
         </section>
+
+        <NearbyKalankiCard />
 
         <p className="mt-6 text-sm leading-6 text-white/45">
           This page is for patient education and general information only. It does not replace in-person medical consultation.

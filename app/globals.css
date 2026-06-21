@@ -1001,3 +1001,153 @@ body.light .seo-footer-card:hover .seo-footer-link,
   text-decoration-color: rgba(255, 255, 255, 0.38) !important;
 }
 /* SEO FOOTER THEME FIX END */
+
+/* KALANKI CARD AND FINAL FOOTER THEME START */
+.nearby-kalanki-section,
+.site-footer-final {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.nearby-kalanki-card {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.nearby-kalanki-area-box {
+  background: rgba(0, 0, 0, 0.22);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nearby-kalanki-eyebrow,
+.nearby-kalanki-subtitle {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.nearby-kalanki-text,
+.site-footer-muted {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.site-footer-text {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.nearby-kalanki-chip {
+  background: rgba(255, 255, 255, 0.065);
+  border-color: rgba(255, 255, 255, 0.11);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nearby-kalanki-chip:hover {
+  background: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+html[data-theme="light"] .nearby-kalanki-section,
+html[data-theme="light"] .site-footer-final,
+body[data-theme="light"] .nearby-kalanki-section,
+body[data-theme="light"] .site-footer-final,
+html.light .nearby-kalanki-section,
+html.light .site-footer-final,
+body.light .nearby-kalanki-section,
+body.light .site-footer-final,
+[data-theme="light"] .nearby-kalanki-section,
+[data-theme="light"] .site-footer-final {
+  background: #f4f7f8 !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .nearby-kalanki-card,
+body[data-theme="light"] .nearby-kalanki-card,
+html.light .nearby-kalanki-card,
+body.light .nearby-kalanki-card,
+[data-theme="light"] .nearby-kalanki-card {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.08);
+}
+
+html[data-theme="light"] .nearby-kalanki-area-box,
+body[data-theme="light"] .nearby-kalanki-area-box,
+html.light .nearby-kalanki-area-box,
+body.light .nearby-kalanki-area-box,
+[data-theme="light"] .nearby-kalanki-area-box {
+  background: rgba(15, 23, 42, 0.035) !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html[data-theme="light"] .nearby-kalanki-eyebrow,
+html[data-theme="light"] .nearby-kalanki-subtitle,
+body[data-theme="light"] .nearby-kalanki-eyebrow,
+body[data-theme="light"] .nearby-kalanki-subtitle,
+html.light .nearby-kalanki-eyebrow,
+html.light .nearby-kalanki-subtitle,
+body.light .nearby-kalanki-eyebrow,
+body.light .nearby-kalanki-subtitle,
+[data-theme="light"] .nearby-kalanki-eyebrow,
+[data-theme="light"] .nearby-kalanki-subtitle {
+  color: rgba(15, 23, 42, 0.46) !important;
+}
+
+html[data-theme="light"] .nearby-kalanki-text,
+html[data-theme="light"] .site-footer-muted,
+body[data-theme="light"] .nearby-kalanki-text,
+body[data-theme="light"] .site-footer-muted,
+html.light .nearby-kalanki-text,
+html.light .site-footer-muted,
+body.light .nearby-kalanki-text,
+body.light .site-footer-muted,
+[data-theme="light"] .nearby-kalanki-text,
+[data-theme="light"] .site-footer-muted {
+  color: rgba(15, 23, 42, 0.6) !important;
+}
+
+html[data-theme="light"] .site-footer-text,
+body[data-theme="light"] .site-footer-text,
+html.light .site-footer-text,
+body.light .site-footer-text,
+[data-theme="light"] .site-footer-text {
+  color: rgba(15, 23, 42, 0.72) !important;
+}
+
+html[data-theme="light"] .nearby-kalanki-chip,
+body[data-theme="light"] .nearby-kalanki-chip,
+html.light .nearby-kalanki-chip,
+body.light .nearby-kalanki-chip,
+[data-theme="light"] .nearby-kalanki-chip {
+  background: rgba(15, 23, 42, 0.055) !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+  color: rgba(15, 23, 42, 0.68) !important;
+}
+
+html[data-theme="light"] .nearby-kalanki-chip:hover,
+body[data-theme="light"] .nearby-kalanki-chip:hover,
+html.light .nearby-kalanki-chip:hover,
+body.light .nearby-kalanki-chip:hover,
+[data-theme="light"] .nearby-kalanki-chip:hover {
+  background: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.3) !important;
+  color: #ffffff !important;
+}
+/* KALANKI CARD AND FINAL FOOTER THEME END */
+
+/* KALANKI TOPIC PAGE PLACEMENT START */
+.nearby-kalanki-section {
+  background: transparent !important;
+  color: #ffffff;
+  transition: color 0.35s ease;
+}
+
+html[data-theme="light"] .ent-doctor-seo-page .nearby-kalanki-section,
+body[data-theme="light"] .ent-doctor-seo-page .nearby-kalanki-section,
+html.light .ent-doctor-seo-page .nearby-kalanki-section,
+body.light .ent-doctor-seo-page .nearby-kalanki-section,
+[data-theme="light"] .ent-doctor-seo-page .nearby-kalanki-section {
+  background: transparent !important;
+  color: #0f172a !important;
+}
+/* KALANKI TOPIC PAGE PLACEMENT END */

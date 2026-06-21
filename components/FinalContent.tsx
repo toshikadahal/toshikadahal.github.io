@@ -547,11 +547,6 @@ export default function FinalContent() {
             ))}
           </div>
         </section>
-
-        <footer className="mt-16 border-t border-white/10 pt-8 text-sm leading-7 text-white/45 sm:mt-20">
-          <p>Copyright 2026 Dr. Anuj Devkota. All rights reserved.</p>
-          <p className="mt-2">ENT Doctor in Kathmandu, Nepal | Teaching Hospital, Maharajgunj | Patient education and academic information.</p>
-        </footer>
       </div>
     </div>
   );

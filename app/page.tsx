@@ -1,4 +1,4 @@
-import ProfessionalDevelopment from "../components/ProfessionalDevelopment";
+import SiteFooter from "../components/SiteFooter";import ProfessionalDevelopment from "../components/ProfessionalDevelopment";
 import ScrollyCanvas from "@/components/ScrollyCanvas";
 import FinalContent from "@/components/FinalContent";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -14,6 +14,7 @@ export default function HomePage() {
       <ScrollyCanvas />
       <FinalContent />
       <ProfessionalDevelopment />
+      <SiteFooter />
     </main>
   );
 }
