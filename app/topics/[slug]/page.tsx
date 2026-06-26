@@ -1,33 +1,4 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { ThemeToggle } from "../../components/ThemeToggle";
-import { getTopic, topics } from "../data";
-
-export function generateStaticParams() {
-  return topics.map((topic) => ({ slug: topic.slug }));
-}
-
-export default async function TopicDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const topic = getTopic(slug);
-  if (!topic) notFound();
-
-  return (
-    <main>
-      <header className="navWrap">
-        <Link href="/" className="brand"><span className="brandMark">TD</span><span><strong>Dr Toshika Dahal</strong><small>Patient education</small></span></Link>
-        <nav className="navLinks"><Link href="/topics">All topics</Link><Link href="/contact">Contact</Link><ThemeToggle /></nav>
-      </header>
-      <article className="sectionShell articleShell">
-        <Link className="backLink" href="/topics">Back to topics</Link>
-        <p className="eyebrow">Eye care guide</p>
-        <h1>{topic.title}</h1>
-        <p className="lead">{topic.subtitle}</p>
-        <div className="articleCard">
-          {topic.points.map((point) => <p key={point}>{point}</p>)}
-          <div className="noticeBox">This page is for education only. Visit an ophthalmologist for examination and treatment advice.</div>
-        </div>
-      </article>
-    </main>
-  );
-}
+import Link from "next/link"; import { notFound } from "next/navigation"; import { topics } from "../data";
+export function generateStaticParams(){return topics.map(t=>({slug:t.slug}))}
+export function generateMetadata({params}:{params:{slug:string}}){const t=topics.find(x=>x.slug===params.slug); return {title:t?.title||"Topic", description:t?.summary||"Eye health topic"}}
+export default function TopicDetail({params}:{params:{slug:string}}){const t=topics.find(x=>x.slug===params.slug); if(!t) notFound(); return <main><header className="site-header"><Link href="/" className="brand"><span className="brand-mark">TD</span><span><strong>Dr Toshika Dahal</strong><small>{t.title}</small></span></Link><nav className="desktop-nav"><Link href="/">Home</Link><Link href="/topics">Topics</Link><Link href="/contact">Contact</Link></nav></header><section className="page-hero topic-hero"><span className="topic-icon large-icon">{t.icon}</span><p className="eyebrow">Patient education</p><h1>{t.title}</h1><p>{t.summary}</p><p className="nepali-line">{t.nepaliTitle}</p></section><section className="section detail-grid"><article className="detail-card"><h2>Common signs</h2><ul>{t.signs.map(x=><li key={x}>{x}</li>)}</ul></article><article className="detail-card"><h2>What happens in clinic</h2><ul>{t.care.map(x=><li key={x}>{x}</li>)}</ul></article><article className="detail-card urgent"><h2>Seek urgent care if</h2><ul>{t.urgent.map(x=><li key={x}>{x}</li>)}</ul></article></section><section className="section callout"><h2>Need evaluation?</h2><p>Call before visiting to confirm appointment timing. Some children need dilating drops, so allow extra time for the visit.</p><div className="visit-actions"><a className="primary-button" href="tel:+9779841740018">Call Dr Toshika Dahal</a><Link className="secondary-button" href="/topics">Back to topics</Link></div></section><footer className="site-footer"><p>© {new Date().getFullYear()} Dr Toshika Dahal</p><p>Patient education only.</p></footer></main>}

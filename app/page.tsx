@@ -1,173 +1,18 @@
-"use client";
-
+﻿"use client";
 import Link from "next/link";
-import { useState } from "react";
-import { ThemeToggle } from "./components/ThemeToggle";
+import { useEffect, useState } from "react";
 import { topics } from "./topics/data";
+const focus = ["Pediatric ophthalmology", "Strabismus and squint evaluation", "Lazy eye and amblyopia care", "Childhood glasses and refraction", "Retinopathy of prematurity screening", "Pediatric cataract", "Adult strabismus and double vision", "Patient education for families"];
+const credentials = ["Fellowship in Pediatric Ophthalmology and Strabismus Surgery, Lumbini Eye Institute and Research Centre, 2024", "MD Ophthalmology, Nepal Eye Hospital, National Academy of Medical Sciences, 2019", "MBBS and Internship, College of Medical Sciences, Bharatpur, Kathmandu University, 2015", "Lifetime member, Nepal Medical Association", "Lifetime member, Nepal Ophthalmic Society", "Lifetime member, Nepal Pediatric Ophthalmology and Strabismus Society"];
+export default function Home(){
+ const [theme,setTheme]=useState("light"); const [lang,setLang]=useState<"en"|"np">("en");
+ useEffect(()=>{const saved=localStorage.getItem("theme")||"light"; setTheme(saved); document.documentElement.dataset.theme=saved},[]);
+ const toggle=()=>{const next=theme==="light"?"dark":"light"; setTheme(next); document.documentElement.dataset.theme=next; localStorage.setItem("theme",next)};
+ return <main><header className="site-header"><Link className="brand" href="/"><span className="brand-mark">TD</span><span><strong>Dr Toshika Dahal</strong><small>Pediatric Ophthalmologist</small></span></Link><nav className="desktop-nav"><a href="#focus">Focus</a><a href="#topics">Eye topics</a><a href="#credentials">Credentials</a><a href="#visit">Visit</a><Link href="/contact">Contact</Link></nav><div className="header-actions"><button onClick={()=>setLang(lang==="en"?"np":"en")}>{lang==="en"?"à¤¨à¥‡à¤ªà¤¾à¤²à¥€":"English"}</button><button onClick={toggle}>{theme==="light"?"Dark":"Light"}</button></div></header>
+ <section className="hero"><div><p className="eyebrow">Pediatric ophthalmology and strabismus care</p><h1>{lang==="en"?"Clear eye care for children, families, and adults with squint.":"à¤¬à¤¾à¤²à¤¬à¤¾à¤²à¤¿à¤•à¤¾, à¤ªà¤°à¤¿à¤µà¤¾à¤° à¤° à¤Ÿà¥‡à¤¢à¥‹ à¤†à¤à¤–à¤¾à¤•à¥‹ à¤¸à¤®à¤¸à¥à¤¯à¤¾ à¤­à¤à¤•à¤¾ à¤¬à¤¿à¤°à¤¾à¤®à¥€à¤•à¤¾ à¤²à¤¾à¤—à¤¿ à¤¸à¥à¤ªà¤·à¥à¤Ÿ à¤†à¤à¤–à¤¾ à¤¸à¥‡à¤µà¤¾à¥¤"}</h1><p className="lead">Dr Toshika Dahal is a Pediatric Ophthalmologist and Strabismus Surgeon at Lumbini Eye Institute, Bhairahawa, Nepal. Her work focuses on child eye examination, squint, amblyopia, glasses in children, premature baby retina screening, and adult strabismus.</p><div className="hero-actions"><a className="primary-button" href="tel:+9779841740018">Call for appointment</a><Link className="secondary-button" href="/topics">Read eye topics</Link></div><div className="quick-facts"><div><b>Fellowship</b><span>Pediatric Ophthalmology and Strabismus</span></div><div><b>Current work</b><span>Lumbini Eye Institute, Bhairahawa</span></div><div><b>For families</b><span>Simple guidance before and after visit</span></div></div></div><div className="hero-media"><img src="/images/dr-toshika-dahal-portrait.jpg" alt="Dr Toshika Dahal"/></div></section>
+ <section id="focus" className="section"><div className="section-heading"><p className="eyebrow">Clinical focus</p><h2>Ophthalmology care designed for children and families</h2><p>The content is structured like strong ophthalmology websites with a clear profile, focused services, patient education, red flags, and appointment guidance.</p></div><div className="focus-grid">{focus.map(x=><article className="focus-card" key={x}><span>âœ“</span><h3>{x}</h3><p>Clear assessment, practical counseling, and follow up planning based on age and visual risk.</p></article>)}</div></section>
+ <section id="topics" className="section soft-section"><div className="section-heading"><p className="eyebrow">Patient education</p><h2>Common eye problems explained simply</h2><p>Each topic page explains signs, clinic evaluation, and warning signs that need urgent care.</p></div><div className="topic-grid">{topics.slice(0,8).map(t=><Link className="topic-card" href={`/topics/${t.slug}`} key={t.slug}><span className="topic-icon">{t.icon}</span><h3>{lang==="en"?t.title:t.nepaliTitle}</h3><p>{t.summary}</p><small>Read more</small></Link>)}</div><div className="center-action"><Link className="secondary-button" href="/topics">View all eye topics</Link></div></section>
+ <section id="credentials" className="section split"><div><p className="eyebrow">Credentials</p><h2>Education, fellowship, and memberships</h2><p>Dr Toshika completed fellowship training in Pediatric Ophthalmology and Strabismus Surgery after MD Ophthalmology and MBBS training.</p><Link className="secondary-button" href="/about">Full profile</Link></div><div className="timeline">{credentials.map((x,i)=><div className="timeline-item" key={x}><span>{String(i+1).padStart(2,"0")}</span><p>{x}</p></div>)}</div></section>
+ <section id="visit" className="section visit-section"><div className="visit-card"><p className="eyebrow">Visit and contact</p><h2>Lumbini Eye Institute, Bhairahawa</h2><p>Call before visiting to confirm OPD timing, appointment availability, and whether your child needs dilating drops during the visit.</p><div className="visit-actions"><a className="primary-button" href="tel:+9779841740018">+977 9841740018</a><a className="secondary-button" href="mailto:toshikadahal2047@gmail.com">Email</a></div></div><div className="warning-card"><h3>Urgent eye warning signs</h3><ul><li>Sudden vision loss</li><li>Severe eye pain or light sensitivity</li><li>White reflex in a child photo</li><li>Eye injury or chemical splash</li><li>Sudden squint, double vision, or droopy eyelid</li></ul></div></section>
+ <footer className="site-footer"><div><b>Dr Toshika Dahal</b><p>Pediatric Ophthalmologist and Strabismus Surgeon</p></div><p>Â© {new Date().getFullYear()} Dr Toshika Dahal. Patient education only.</p></footer></main>}
 
-const copy = {
-  en: {
-    label: "NP",
-    eyebrow: "Pediatric Ophthalmology and Strabismus Surgery",
-    title: "Dr Toshika Dahal",
-    subtitle: "Pediatric Ophthalmologist and Strabismus Surgeon",
-    description:
-      "Focused eye care for children, squint, lazy eye, pediatric cataract, childhood refractive error, and family centered patient education.",
-    primary: "View eye topics",
-    secondary: "Contact",
-    scheduleTitle: "Current practice",
-    scheduleText:
-      "Pediatric Ophthalmologist and Strabismus Surgeon at Lumbini Eye Institute. Ophthalmology Consultant at Lumbini Eye Institute, Bhairahawa.",
-    aboutTitle: "Clear eye care for children and families",
-    aboutText:
-      "The website is designed as a simple profile and patient education platform for families who need reliable information about pediatric eye care and squint treatment.",
-    trainingTitle: "Training and qualifications",
-    contactTitle: "Contact",
-    email: "Email",
-    phone: "Phone"
-  },
-  np: {
-    label: "EN",
-    eyebrow: "बाल नेत्र रोग तथा स्क्विन्ट शल्यक्रिया",
-    title: "डा तोषिका दाहाल",
-    subtitle: "बाल नेत्र रोग विशेषज्ञ तथा स्क्विन्ट सर्जन",
-    description:
-      "बालबालिकाको आँखा, स्क्विन्ट, lazy eye, चश्माको समस्या, बाल मोतिबिन्दु र परिवारका लागि सरल नेत्र शिक्षा।",
-    primary: "आँखा सम्बन्धी विषय",
-    secondary: "सम्पर्क",
-    scheduleTitle: "हालको कार्यक्षेत्र",
-    scheduleText:
-      "Lumbini Eye Institute मा Pediatric Ophthalmologist and Strabismus Surgeon। Lumbini Eye Institute, Bhairahawa मा Ophthalmology Consultant।",
-    aboutTitle: "बालबालिका र परिवारका लागि स्पष्ट नेत्र सेवा",
-    aboutText:
-      "यो वेबसाइट Dr Toshika Dahal को प्रोफाइल र बिरामी शिक्षाका लागि बनाइएको हो।",
-    trainingTitle: "तालिम र योग्यता",
-    contactTitle: "सम्पर्क",
-    email: "इमेल",
-    phone: "फोन"
-  }
-};
-
-const qualifications = [
-  "Fellowship in Pediatric Ophthalmology and Strabismus Surgery, Lumbini Eye Institute and Research Centre, 2024",
-  "MD Ophthalmology, Nepal Eye Hospital and National Academy of Medical Sciences, 2019",
-  "MBBS and Internship, College of Medical Sciences, Bharatpur, Kathmandu University, 2015"
-];
-
-const highlights = [
-  "Pediatric ophthalmology",
-  "Strabismus and squint surgery",
-  "Amblyopia and child vision care",
-  "Patient education for families"
-];
-
-const memberships = [
-  "Lifetime member of Nepal Medical Association",
-  "Lifetime member of Nepal Ophthalmic Society",
-  "Lifetime member of Nepal Pediatric Ophthalmology and Strabismus Society"
-];
-
-export default function Home() {
-  const [lang, setLang] = useState<"en" | "np">("en");
-  const t = copy[lang];
-
-  return (
-    <main>
-      <header className="navWrap">
-        <Link href="/" className="brand">
-          <span className="brandMark">TD</span>
-          <span>
-            <strong>Dr Toshika Dahal</strong>
-            <small>Eye Care</small>
-          </span>
-        </Link>
-        <nav className="navLinks">
-          <Link href="/about">About</Link>
-          <Link href="/topics">Eye topics</Link>
-          <Link href="/contact">Contact</Link>
-          <button className="iconButton" onClick={() => setLang(lang === "en" ? "np" : "en")}>{t.label}</button>
-          <ThemeToggle />
-        </nav>
-      </header>
-
-      <section className="hero sectionShell">
-        <div className="heroText reveal">
-          <p className="eyebrow">{t.eyebrow}</p>
-          <h1>{t.title}</h1>
-          <h2>{t.subtitle}</h2>
-          <p className="lead">{t.description}</p>
-          <div className="heroActions">
-            <Link href="/topics" className="button primary">{t.primary}</Link>
-            <Link href="/contact" className="button ghost">{t.secondary}</Link>
-          </div>
-          <div className="statGrid">
-            <div><strong>2024</strong><span>Fellowship</span></div>
-            <div><strong>2019</strong><span>MD Ophthalmology</span></div>
-            <div><strong>3</strong><span>Lifetime memberships</span></div>
-          </div>
-        </div>
-        <div className="heroPhoto cardGlow reveal delay1">
-          <img src="/images/dr-toshika-hero.jpg" alt="Dr Toshika Dahal" />
-        </div>
-      </section>
-
-      <section className="sectionShell gridTwo">
-        <article className="glassCard reveal">
-          <p className="eyebrow">Profile</p>
-          <h2>{t.aboutTitle}</h2>
-          <p>{t.aboutText}</p>
-          <div className="pillWrap">
-            {highlights.map((item) => <span className="pill" key={item}>{item}</span>)}
-          </div>
-        </article>
-        <article className="glassCard reveal delay1">
-          <p className="eyebrow">Clinic</p>
-          <h2>{t.scheduleTitle}</h2>
-          <p>{t.scheduleText}</p>
-          <div className="contactMini">
-            <a href="mailto:toshikadahal2047@gmail.com">{t.email}: toshikadahal2047@gmail.com</a>
-            <a href="tel:+9779841740018">{t.phone}: +977-9841740018</a>
-          </div>
-        </article>
-      </section>
-
-      <section className="sectionShell">
-        <div className="sectionHead reveal">
-          <p className="eyebrow">Patient education</p>
-          <h2>Eye topics for families</h2>
-          <Link href="/topics">See all topics</Link>
-        </div>
-        <div className="cardGrid">
-          {topics.slice(0, 6).map((topic, index) => (
-            <Link className="topicCard reveal" href={`/topics/${topic.slug}`} key={topic.slug} style={{ animationDelay: `${index * 70}ms` }}>
-              <span>0{index + 1}</span>
-              <h3>{topic.title}</h3>
-              <p>{topic.subtitle}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="sectionShell gridTwo alignCenter">
-        <div className="portraitCard reveal">
-          <img src="/images/dr-toshika-portrait.png" alt="Dr Toshika Dahal portrait" />
-        </div>
-        <div className="reveal delay1">
-          <p className="eyebrow">Academic profile</p>
-          <h2>{t.trainingTitle}</h2>
-          <ul className="checkList">
-            {qualifications.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-          <h3>Memberships</h3>
-          <ul className="checkList compact">
-            {memberships.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <p>Copyright {new Date().getFullYear()} Dr Toshika Dahal. All rights reserved.</p>
-      </footer>
-    </main>
-  );
-}

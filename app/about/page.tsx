@@ -1,30 +1,8 @@
 import Link from "next/link";
-import { ThemeToggle } from "../components/ThemeToggle";
-
-const timeline = [
-  "Pediatric Ophthalmologist and Strabismus Surgeon at Lumbini Eye Institute, May 2024 to present",
-  "Ophthalmology Consultant at Lumbini Eye Institute, Bhairahawa, December 2019 to present",
-  "Fellowship in Pediatric Ophthalmology and Strabismus Surgery, 2024",
-  "MD Ophthalmology, Nepal Eye Hospital and National Academy of Medical Sciences, 2019",
-  "MBBS and Internship, College of Medical Sciences, Bharatpur, 2015"
-];
-
-export default function AboutPage() {
-  return (
-    <main>
-      <header className="navWrap">
-        <Link href="/" className="brand"><span className="brandMark">TD</span><span><strong>Dr Toshika Dahal</strong><small>About</small></span></Link>
-        <nav className="navLinks"><Link href="/topics">Eye topics</Link><Link href="/contact">Contact</Link><ThemeToggle /></nav>
-      </header>
-      <section className="sectionShell pageHero">
-        <p className="eyebrow">About</p>
-        <h1>Dr Toshika Dahal</h1>
-        <p className="lead">Pediatric Ophthalmologist and Strabismus Surgeon with clinical focus on child eye care, squint, amblyopia, and family centered eye health education.</p>
-      </section>
-      <section className="sectionShell gridTwo alignCenter">
-        <div className="portraitCard"><img src="/images/dr-toshika-portrait.png" alt="Dr Toshika Dahal" /></div>
-        <div className="glassCard"><h2>Professional profile</h2><ul className="checkList">{timeline.map((item) => <li key={item}>{item}</li>)}</ul></div>
-      </section>
-    </main>
-  );
-}
+const education=["Fellowship in Pediatric Ophthalmology and Strabismus Surgery, Lumbini Eye Institute and Research Centre, 2024","MD Ophthalmology, Nepal Eye Hospital, National Academy of Medical Sciences, 2019","MBBS and Internship, College of Medical Sciences, Bharatpur, Kathmandu University, 2015","Higher Secondary Education, St. Mary's High School, 2009","School Leaving Certificate, St. Mary's High School, 2007"];
+const experience=["Pediatric Ophthalmologist and Strabismus Surgeon at Lumbini Eye Institute, May 2024 to present","Ophthalmology Consultant at Lumbini Eye Institute, Bhairahawa, December 2019 to present","Medical Officer, Department of Paediatrics, Kathmandu Medical College Teaching Hospital, 2015","Medical Officer, Department of Emergency, Chure Hill Hospital, Hetauda, 2016"];
+const training=["75th Annual Conference of the Delhi Ophthalmological Society, 2025","Lumbini Eye Institute Conference, 2024 and 2023","Medical Education Training, 2018","14th Biennial SAARC Academy of Ophthalmology, 2018","Symposium on minimally invasive glaucoma surgery, 2018","3rd National Oculoplasty Conference Nepal, 2017","Early Detection and Referral of Retinoblastoma, 2016","Research Methodology Training, 2018","Advanced Cardiac Life Support Training, 2017"];
+const memberships=["Lifetime member of Nepal Medical Association","Lifetime member of Nepal Ophthalmic Society","Lifetime member of Nepal Pediatric Ophthalmology and Strabismus Society","Association of St. Mary's Alumnae Nepal","Community Development Committee, Subidhanagar, Kathmandu"];
+function List({title,items}:{title:string;items:string[]}){return <article className="detail-card"><h2>{title}</h2><ul>{items.map(x=><li key={x}>{x}</li>)}</ul></article>}
+export const metadata={title:"About Dr Toshika Dahal"};
+export default function About(){return <main><header className="site-header"><Link href="/" className="brand"><span className="brand-mark">TD</span><span><strong>Dr Toshika Dahal</strong><small>Professional profile</small></span></Link><nav className="desktop-nav"><Link href="/">Home</Link><Link href="/topics">Topics</Link><Link href="/contact">Contact</Link></nav></header><section className="page-hero about-hero"><div><p className="eyebrow">About</p><h1>Dr Toshika Dahal</h1><p>Pediatric Ophthalmologist and Strabismus Surgeon with clinical focus on child eye care, squint, amblyopia, pediatric refraction, and patient education.</p></div><img src="/images/dr-toshika-dahal-clinic.png" alt="Dr Toshika Dahal"/></section><section className="section two-columns"><List title="Education" items={education}/><List title="Experience" items={experience}/><List title="Conferences and training" items={training}/><List title="Memberships" items={memberships}/></section><footer className="site-footer"><p>© {new Date().getFullYear()} Dr Toshika Dahal</p><p>Patient education only.</p></footer></main>}

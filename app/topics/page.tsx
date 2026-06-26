@@ -1,28 +1,3 @@
-import Link from "next/link";
-import { ThemeToggle } from "../components/ThemeToggle";
-import { topics } from "./data";
-
-export default function TopicsPage() {
-  return (
-    <main>
-      <header className="navWrap">
-        <Link href="/" className="brand"><span className="brandMark">TD</span><span><strong>Dr Toshika Dahal</strong><small>Eye topics</small></span></Link>
-        <nav className="navLinks"><Link href="/about">About</Link><Link href="/contact">Contact</Link><ThemeToggle /></nav>
-      </header>
-      <section className="sectionShell pageHero">
-        <p className="eyebrow">Patient education</p>
-        <h1>Eye topics</h1>
-        <p className="lead">Simple information for families about child eye care, squint, lazy eye, and common warning signs.</p>
-      </section>
-      <section className="sectionShell cardGrid">
-        {topics.map((topic, index) => (
-          <Link className="topicCard" href={`/topics/${topic.slug}`} key={topic.slug}>
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <h2>{topic.title}</h2>
-            <p>{topic.subtitle}</p>
-          </Link>
-        ))}
-      </section>
-    </main>
-  );
-}
+import Link from "next/link"; import { topics } from "./data";
+export const metadata = { title: "Eye health topics", description: "Patient education topics by Dr Toshika Dahal." };
+export default function TopicsPage(){return <main><header className="site-header"><Link href="/" className="brand"><span className="brand-mark">TD</span><span><strong>Dr Toshika Dahal</strong><small>Eye health topics</small></span></Link><nav className="desktop-nav"><Link href="/">Home</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></nav></header><section className="page-hero"><p className="eyebrow">Patient education</p><h1>Eye health topics for parents and patients</h1><p>These pages explain common symptoms, what to expect in clinic, and warning signs that need urgent eye care.</p></section><section className="section"><div className="topic-grid">{topics.map(t=><Link className="topic-card" href={`/topics/${t.slug}`} key={t.slug}><span className="topic-icon">{t.icon}</span><h2>{t.title}</h2><p>{t.summary}</p><small>{t.nepaliTitle}</small></Link>)}</div></section><footer className="site-footer"><p>© {new Date().getFullYear()} Dr Toshika Dahal</p><p>Patient education only.</p></footer></main>}
