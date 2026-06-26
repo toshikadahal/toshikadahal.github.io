@@ -1,45 +1,22 @@
 import type { MetadataRoute } from "next";
+import { topics } from "./topics/data";
 
-const baseUrl = "https://anujdevkota.vercel.app";
-
-const routes = [
-  "",
-  "/topics/allergic-rhinitis",
-  "/topics/cholesteatoma",
-  "/topics/csf-leak-skull-base-awareness",
-  "/topics/ent-doctor-kathmandu-nepal",
-  "/topics/ear-discharge-chronic-ear-disease",
-  "/topics/earwax-ear-blockage",
-  "/topics/ent-surgery-preparation",
-  "/topics/facial-nerve-weakness",
-  "/topics/head-neck-cancer-warning-signs",
-  "/topics/hearing-loss",
-  "/topics/hoarseness-voice-change",
-  "/topics/nasal-blockage",
-  "/topics/neck-lump",
-  "/topics/nosebleed-epistaxis",
-  "/topics/otosclerosis-conductive-hearing-loss",
-  "/topics/pediatric-ent",
-  "/topics/post-nasal-drip",
-  "/topics/salivary-gland-swelling",
-  "/topics/sinusitis",
-  "/topics/smell-loss",
-  "/topics/snoring-sleep-apnea",
-  "/topics/swallowing-difficulty",
-  "/topics/swimmers-ear-otomycosis",
-  "/topics/throat-reflux-lpr",
-  "/topics/thyroid-nodules-goiter",
-  "/topics/tinnitus",
-  "/topics/tonsil-adenoid-snoring",
-  "/topics/tympanic-membrane-perforation",
-  "/topics/vertigo-dizziness-balance"
-];
+const siteUrl = "https://toshikadahal.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
+  const routes = ["", "/about", "/contact", "/topics"].map((route) => ({
+    url: `${siteUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
+    changeFrequency: "monthly" as const,
     priority: route === "" ? 1 : 0.8
   }));
+
+  const topicRoutes = topics.map((topic) => ({
+    url: `${siteUrl}/topics/${topic.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7
+  }));
+
+  return [...routes, ...topicRoutes];
 }
