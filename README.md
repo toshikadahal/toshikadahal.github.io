@@ -1,37 +1,32 @@
-# Dr. Anuj Devkota
+﻿# Dr. Toshika Dahal
 
-Official website of Dr. Anuj Devkota, ENT, Head and Neck Surgeon and Assistant Professor at Teaching Hospital, Maharajgunj, Nepal.
+Official website of Dr. Toshika Dahal, Pediatric Ophthalmologist and Strabismus Surgeon.
 
-Live website:
+Live website
 
-https://anujdevkota.github.io/
+https://toshikadahal.github.io
+
+## Professional profile
+
+- Pediatric Ophthalmologist and Strabismus Surgeon
+- Fellowship in Pediatric Ophthalmology and Strabismus Surgery, Lumbini Eye Institute and Research Centre, 2024
+- MD Ophthalmology, Nepal Eye Hospital, National Academy of Medical Sciences, 2019
+- Ophthalmology Consultant at Lumbini Eye Institute, Bhairahawa
 
 ## Website sections
 
 - Scrollytelling introduction
-- Small animated scroll arrow on first screen
-- ENT topic cards
-- Detailed ENT topic pages
-- Credentials block
-- Appointment buttons
+- Eye health topic cards
+- Pediatric ophthalmology and strabismus focus
+- Education and fellowship section
+- Work experience section
+- Membership and training cards
+- Appointment and contact section
 - Google Maps links
-- Urgent ENT care guidance
 - Dark and light theme toggle
-- Mobile navigation
-- Fixed back to topics button on subpages
-- Consultation schedule and contact
-- Research and teaching interests
 
-## Medical disclaimer
+## Contact
 
-Information on this website is for general educational purposes only. It does not replace consultation with a qualified medical professional.
+Email: toshikadahal2047@gmail.com
 
-## Copyright
-
-Copyright 2026 Dr. Anuj Devkota. All rights reserved.
-
-This repository is public for website hosting. The source code, design, text, images, animations, layout, and assets may not be copied, modified, redistributed, or reused without prior written permission.
-
-Backup branch created before this push:
-
-backup-before-final-nav-20260528-160241
+Phone: +977-9841740018
