@@ -68,7 +68,7 @@ export default function Home() {
         <nav className="navLinks">
           <a href="#topics">Eye topics</a>
           <a href="#credentials">Credentials</a>
-          <a href="#visit">Visit</a>
+          
           <a href="#contact">Contact</a>
         </nav>
 
@@ -166,18 +166,6 @@ export default function Home() {
         </article>
       </section>
 
-      <section id="visit" className="section visitSection">
-        <div>
-          <p className="eyebrow">Visit</p>
-          <h2>Lumbini Eye Institute, Bhairahawa</h2>
-          <p>
-            Bring previous prescriptions, glasses, medicines, eye reports, and old records.
-            Call before visiting for appointment timing and availability.
-          </p>
-        </div>
-        <a className="primaryBtn" href="tel:+9779841740018">Call now</a>
-      </section>
-
       <section id="contact" className="section contactSection">
         <div className="contactPhotoWrap">
           <Image
@@ -220,4 +208,5 @@ export default function Home() {
     </main>
   );
 }
+
 
