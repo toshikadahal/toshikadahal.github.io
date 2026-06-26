@@ -1,3 +1,25 @@
-import Link from "next/link"; import { topics } from "./data";
-export const metadata = { title: "Eye health topics", description: "Patient education topics by Dr Toshika Dahal." };
-export default function TopicsPage(){return <main><header className="site-header"><Link href="/" className="brand"><span className="brand-mark">TD</span><span><strong>Dr Toshika Dahal</strong><small>Eye health topics</small></span></Link><nav className="desktop-nav"><Link href="/">Home</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></nav></header><section className="page-hero"><p className="eyebrow">Patient education</p><h1>Eye health topics for parents and patients</h1><p>These pages explain common symptoms, what to expect in clinic, and warning signs that need urgent eye care.</p></section><section className="section"><div className="topic-grid">{topics.map(t=><Link className="topic-card" href={`/topics/${t.slug}`} key={t.slug}><span className="topic-icon">{t.icon}</span><h2>{t.title}</h2><p>{t.summary}</p><small>{t.nepaliTitle}</small></Link>)}</div></section><footer className="site-footer"><p>© {new Date().getFullYear()} Dr Toshika Dahal</p><p>Patient education only.</p></footer></main>}
+﻿import Link from "next/link";
+import { topics } from "./topicData";
+
+export const metadata = {
+  title: "Eye Topics"
+};
+
+export default function TopicsPage() {
+  return (
+    <main className="site">
+      <section className="section">
+        <p className="eyebrow">Eye health topics</p>
+        <h1>Patient education for common eye problems</h1>
+        <div className="topic-grid">
+          {topics.map((topic) => (
+            <Link className="topic-card" href={`/topics/${topic.slug}`} key={topic.slug}>
+              <h3>{topic.title}</h3>
+              <p>{topic.summary}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
